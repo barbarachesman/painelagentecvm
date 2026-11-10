@@ -609,6 +609,15 @@
     font-weight: 700;
   }
 
+  .retencao-stats .is-up,
+  .retencao-stats .is-down {
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .retencao-stats .is-up { color: var(--up); }
+  .retencao-stats .is-down { color: var(--down); }
+
   .retencao-bar {
     grid-column: 1 / -1;
     height: 8px;
@@ -1150,14 +1159,14 @@
             <span class="scope scope-agente">Motivos de retenção</span>
             <h2>Por que o lead não foi para a consultora</h2>
             <p>
-              Motivo da jornada em que a pessoa parou antes do transbordo. Pode ser escolha dela ou erro
-              (loja fechada, ruptura, fuga no anúncio). Toda leitura compara com o dia anterior e com a semana anterior.
+              Participação em 10 nov e em 2 nov. A faixa de 2 a 9 nov ainda está vazia na planilha.
+              O volume de sessões não veio nesse recorte.
             </p>
           </header>
           <div class="panel">
             <div class="retencao-head">
-              <h3 class="section-title">Mapeamento</h3>
-              <span class="retencao-col-label">Volume · % part. · vs dia · vs semana</span>
+              <h3 class="section-title">Histórico</h3>
+              <span class="retencao-col-label">10 nov · 2 nov · variação · 2 a 9 nov</span>
             </div>
             <ol class="retencao-list">
               <li class="retencao-row">
@@ -1166,35 +1175,38 @@
                   <span>Sondagem sem decisão</span>
                 </div>
                 <div class="retencao-stats">
-                  <b>100.642 · 49,66%</b>
-                  <span class="is-placeholder">X vs dia</span>
-                  <span class="is-placeholder">X vs semana</span>
+                  <b>57,3%</b>
+                  <span>43,5% em 2 nov</span>
+                  <span class="is-down">+13,8 p.p.</span>
+                  <span class="is-placeholder">X</span>
                 </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 49.66%"></span></div>
+                <div class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 57.3%"></span></div>
               </li>
               <li class="retencao-row">
                 <div class="retencao-copy">
-                  <strong>2. Pós-exibição de carrossel</strong>
-                  <span>Visualização de valores</span>
-                </div>
-                <div class="retencao-stats">
-                  <b>62.309 · 30,74%</b>
-                  <span class="is-placeholder">X vs dia</span>
-                  <span class="is-placeholder">X vs semana</span>
-                </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 30.74%"></span></div>
-              </li>
-              <li class="retencao-row">
-                <div class="retencao-copy">
-                  <strong>3. Escolha da loja</strong>
+                  <strong>2. Escolha da loja</strong>
                   <span>Indisponibilidade ou loja fechada</span>
                 </div>
                 <div class="retencao-stats">
-                  <b>25.689 · 12,68%</b>
-                  <span class="is-placeholder">X vs dia</span>
-                  <span class="is-placeholder">X vs semana</span>
+                  <b>26,8%</b>
+                  <span>14,7% em 2 nov</span>
+                  <span class="is-down">+12,1 p.p.</span>
+                  <span class="is-placeholder">X</span>
                 </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 12.68%"></span></div>
+                <div class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 26.8%"></span></div>
+              </li>
+              <li class="retencao-row">
+                <div class="retencao-copy">
+                  <strong>3. Pós-exibição de carrossel</strong>
+                  <span>Visualização de valores</span>
+                </div>
+                <div class="retencao-stats">
+                  <b>13,5%</b>
+                  <span>27,3% em 2 nov</span>
+                  <span class="is-up">−13,8 p.p.</span>
+                  <span class="is-placeholder">X</span>
+                </div>
+                <div class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 13.5%"></span></div>
               </li>
               <li class="retencao-row">
                 <div class="retencao-copy">
@@ -1202,30 +1214,31 @@
                   <span>Fuga em anúncio CTWA</span>
                 </div>
                 <div class="retencao-stats">
-                  <b>10.175 · 5,02%</b>
-                  <span class="is-placeholder">X vs dia</span>
-                  <span class="is-placeholder">X vs semana</span>
+                  <b>2,3%</b>
+                  <span>14,3% em 2 nov</span>
+                  <span class="is-up">−12,0 p.p.</span>
+                  <span class="is-placeholder">X</span>
                 </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 5.02%"></span></div>
+                <div class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 2.3%"></span></div>
               </li>
               <li class="retencao-row">
                 <div class="retencao-copy">
-                  <strong>5. Fragrância não encontrada</strong>
+                  <strong>5. Produto/fragrância não encontrada</strong>
                   <span>Ruptura ou concorrentes</span>
                 </div>
                 <div class="retencao-stats">
-                  <b>3.849 · 1,90%</b>
-                  <span class="is-placeholder">X vs dia</span>
-                  <span class="is-placeholder">X vs semana</span>
+                  <b>0,1%</b>
+                  <span>0,2% em 2 nov</span>
+                  <span class="is-up">−0,1 p.p.</span>
+                  <span class="is-placeholder">X</span>
                 </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 1.9%"></span></div>
+                <div class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.1%"></span></div>
               </li>
             </ol>
             <p class="def">
-              Volume e participação são o mapeamento passado desses motivos (202.664 sessões).
-              A comparação com o dia e a semana anteriores ainda não veio nesse recorte, por isso fica <strong>X</strong>.
-              O deep dive de cada categoria, com eventos, fricções e exemplos, está em Não transbordo.
-              Imediato vs aquecido, carrinho e GMV por tipo de transbordo também seguem <strong>X</strong>.
+              A barra é a participação de 10 nov. A variação é contra 2 nov. Queda significa menos gente parando naquele ponto.
+              A coluna de 2 a 9 nov está vazia, por isso fica <strong>X</strong>.
+              O deep dive de cada categoria está em Não transbordo.
             </p>
           </div>
         </section>
@@ -1300,12 +1313,13 @@
                 <span>Sondagem sem decisão</span>
               </div>
               <div class="retencao-stats">
-                <b>100.642 · 49,66%</b>
-                <span class="is-placeholder">X vs dia</span>
-                <span class="is-placeholder">X vs semana</span>
+                <b>57,3%</b>
+                <span>43,5% em 2 nov</span>
+                <span class="is-down">+13,8 p.p.</span>
+                <span class="is-placeholder">X</span>
               </div>
             </div>
-            <div class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 49.66%"></span></div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 57.3%"></span></div>
             <div class="dive-slots">
               <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
               <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
@@ -1319,12 +1333,13 @@
                 <span>Indisponibilidade ou loja fechada</span>
               </div>
               <div class="retencao-stats">
-                <b>25.689 · 12,68%</b>
-                <span class="is-placeholder">X vs dia</span>
-                <span class="is-placeholder">X vs semana</span>
+                <b>26,8%</b>
+                <span>14,7% em 2 nov</span>
+                <span class="is-down">+12,1 p.p.</span>
+                <span class="is-placeholder">X</span>
               </div>
             </div>
-            <div class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 12.68%"></span></div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 26.8%"></span></div>
             <div class="dive-slots">
               <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
               <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
@@ -1338,12 +1353,13 @@
                 <span>Visualização de valores</span>
               </div>
               <div class="retencao-stats">
-                <b>62.309 · 30,74%</b>
-                <span class="is-placeholder">X vs dia</span>
-                <span class="is-placeholder">X vs semana</span>
+                <b>13,5%</b>
+                <span>27,3% em 2 nov</span>
+                <span class="is-up">−13,8 p.p.</span>
+                <span class="is-placeholder">X</span>
               </div>
             </div>
-            <div class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 30.74%"></span></div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 13.5%"></span></div>
             <div class="dive-slots">
               <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
               <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
@@ -1357,12 +1373,13 @@
                 <span>Fuga em anúncio CTWA</span>
               </div>
               <div class="retencao-stats">
-                <b>10.175 · 5,02%</b>
-                <span class="is-placeholder">X vs dia</span>
-                <span class="is-placeholder">X vs semana</span>
+                <b>2,3%</b>
+                <span>14,3% em 2 nov</span>
+                <span class="is-up">−12,0 p.p.</span>
+                <span class="is-placeholder">X</span>
               </div>
             </div>
-            <div class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 5.02%"></span></div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 2.3%"></span></div>
             <div class="dive-slots">
               <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
               <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
@@ -1376,12 +1393,13 @@
                 <span>Ruptura ou concorrentes</span>
               </div>
               <div class="retencao-stats">
-                <b>3.849 · 1,90%</b>
-                <span class="is-placeholder">X vs dia</span>
-                <span class="is-placeholder">X vs semana</span>
+                <b>0,1%</b>
+                <span>0,2% em 2 nov</span>
+                <span class="is-up">−0,1 p.p.</span>
+                <span class="is-placeholder">X</span>
               </div>
             </div>
-            <div class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 1.9%"></span></div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.1%"></span></div>
             <div class="dive-slots">
               <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
               <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
@@ -1389,14 +1407,14 @@
             </div>
           </article>
           <p class="def">
-            Volume e participação são o mapeamento passado (202.664 sessões), ainda sem comparação com o dia e a semana anteriores.
+            A participação é a de 10 nov, contra 2 nov. A faixa de 2 a 9 nov está vazia na planilha.
             Eventos, fricções e exemplos de conversa entram quando os dois recortes chegarem.
           </p>
         </section>
       </main>
 
       <footer class="footer">
-        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · mapeamento de retenção</span>
+        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · histórico de retenção</span>
         <span><code>X</code> = métrica ausente nesses recortes</span>
       </footer>
     </div>
