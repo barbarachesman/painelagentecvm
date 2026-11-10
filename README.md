@@ -34,4 +34,4 @@ O dash LD vale só com o filtro **canal RECEPTIVE** em **9 nov 2026**. O export 
 - **Vs meta:** realizado do dia preenchido; coluna de meta segue `X`
 - **Origens e ativo:** estrutura mantida, números `X` até um export com o mesmo filtro
 - **Agente e qualidade:** Sinfonia, recorte do agente CVM
-- **Deep dive:** transbordo imediato/aquecido ainda `X`
+- **Retenção:** motivos pelos quais o lead não foi para a consultora, com volume e participação do mapeamento passado. Comparação vs dia anterior e vs semana anterior fica `X` até haver série. Transbordo imediato/aquecido também segue `X`
