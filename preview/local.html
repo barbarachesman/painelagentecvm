@@ -448,16 +448,6 @@
     color: var(--recesso);
   }
 
-  .aviso-box {
-    margin: 0 0 1rem;
-    padding: 0.75rem 0.95rem;
-    background: rgba(255, 186, 124, 0.22);
-    border: 1px solid rgba(196, 122, 44, 0.28);
-    border-radius: var(--radius);
-    color: var(--navy);
-    font-size: 0.9rem;
-  }
-
   .muted {
     color: var(--texto);
   }
@@ -901,13 +891,6 @@
         <button type="button" class="nav-btn is-review" data-view="qualidade" aria-pressed="false">Qualidade</button>
         <button type="button" class="nav-btn" data-view="retencao" aria-pressed="false">Retenção</button>
       </nav>
-
-      <p class="aviso-box">
-        A capa oficial vale com o filtro <strong>canal RECEPTIVE</strong>, sempre no dia de <strong>ontem</strong>
-        (<strong id="dia-banner">9 nov 2026</strong>).
-        O export anterior (1 jan–26 out, sem esse canal) estava filtrado errado e saiu do painel.
-        O que essa capa não traz continua como <strong>X</strong>. Sinfonia segue no recorte do agente.
-      </p>
 
       <main class="main section-gap">
         <section id="view-dia" class="view">
@@ -1538,8 +1521,6 @@
       if (greeting) greeting.textContent = 'ontem · ' + formatGreetingDate(yday.date);
       const badge = document.getElementById('dia-badge');
       if (badge) badge.textContent = short;
-      const banner = document.getElementById('dia-banner');
-      if (banner) banner.textContent = short;
 
       const hasCover = yday.iso === COVER_ISO;
       document.querySelectorAll('#view-dia .js-dia-value').forEach(function (el) {
