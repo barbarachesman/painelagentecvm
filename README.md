@@ -23,10 +23,15 @@ Abra [`preview/local.html`](preview/local.html) no navegador.
 
 Mesmo fluxo do Gestor360: `clasp create` / `clasp push` e implantar como App da Web no domínio GB.
 
-## Escopo V1 (layout)
+## O que o painel mostra
 
-- Resultados financeiros: receita bruta, boleto médio, metas
-- Funil & operação: leads → encaminhamento → atendimento → conversão
-- Deep dive: mix imediato/aquecido, carrinhos, BM por tipo
+Recortes estáticos do Dashboard Oficial LD e da Plataforma Sinfonia. O que o print não traz fica como **`X`**.
 
-Conexão BigQuery / report diário e quebra avançada de funil entram nas próximas fatias.
+O dash LD vale só com o filtro **canal RECEPTIVE** em **9 nov 2026**. O export de 1 jan–26 out estava filtrado errado e não entra no painel.
+
+- **Dia:** receita, boleto, leads, encaminhamento, atendimento e conversão D+0, contra o ano anterior
+- **Canal:** atendidos, encaminhamentos e TME do mesmo dia. D+7 e acumulado do ano seguem `X`
+- **Vs meta:** realizado do dia preenchido; coluna de meta segue `X`
+- **Origens e ativo:** estrutura mantida, números `X` até um export com o mesmo filtro
+- **Agente e qualidade:** Sinfonia, recorte do agente CVM
+- **Deep dive:** transbordo imediato/aquecido ainda `X`

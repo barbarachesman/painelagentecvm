@@ -169,6 +169,10 @@
     color: #fff;
   }
 
+  .view {
+    scroll-margin-top: 0.75rem;
+  }
+
   .view-header {
     margin-bottom: 0.95rem;
   }
@@ -422,6 +426,95 @@
     color: var(--azul);
     padding: 0.1em 0.35em;
     border-radius: 0.35em;
+  }
+
+  .scope {
+    display: inline-block;
+    margin-left: 0.35rem;
+    border-radius: 999px;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: 0.15em;
+  }
+
+  .scope-canal {
+    background: var(--pill);
+    color: var(--azul);
+  }
+
+  .scope-agente {
+    background: rgba(255, 186, 124, 0.35);
+    color: var(--aviso);
+  }
+
+  .scope-pendente {
+    background: rgba(122, 107, 181, 0.16);
+    color: var(--recesso);
+  }
+
+  .def {
+    margin: 0.75rem 0 0;
+    color: var(--texto);
+    font-size: 0.84rem;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    min-width: 720px;
+  }
+
+  .data-table th,
+  .data-table td {
+    text-align: left;
+    padding: 0.45rem 0.4rem;
+    border-bottom: 1px solid var(--borda);
+    vertical-align: top;
+    color: var(--texto);
+  }
+
+  .data-table th {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--azul);
+    white-space: nowrap;
+  }
+
+  .data-table td:first-child {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .data-table .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    color: var(--navy);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .data-table .num.is-placeholder {
+    color: var(--recesso);
+  }
+
+  .data-table tr.is-total td {
+    color: var(--navy);
+    font-weight: 700;
+    border-bottom: 0;
+  }
+
+  .stack {
+    display: grid;
+    gap: 1rem;
   }
 
   @media (max-width: 860px) {

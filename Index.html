@@ -19,7 +19,7 @@
           <span class="brand-mark" aria-hidden="true">CVM</span>
           <p class="brand-name">Painel Funil</p>
         </div>
-        <p class="header-note">Agente CVM · Interfaces Conversacionais</p>
+        <p class="header-note">Agente CVM · Loja Digital · Sinfonia</p>
       </div>
     </header>
 
@@ -28,97 +28,398 @@
       <h1 class="greeting">Funil e <em>performance</em> do Agente CVM</h1>
 
       <nav class="nav" aria-label="Visões do painel">
-        <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">
-          Visão do dia
-        </button>
-        <button type="button" class="nav-btn" data-view="funil" aria-pressed="false">
-          Funil
-        </button>
-        <button type="button" class="nav-btn" data-view="deepdive" aria-pressed="false">
-          Deep dive
-        </button>
+        <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">Dia</button>
+        <button type="button" class="nav-btn" data-view="canal" aria-pressed="false">Canal LD</button>
+        <button type="button" class="nav-btn" data-view="meta" aria-pressed="false">Vs meta</button>
+        <button type="button" class="nav-btn" data-view="origens" aria-pressed="false">Origens</button>
+        <button type="button" class="nav-btn" data-view="ativo" aria-pressed="false">Ativo</button>
+        <button type="button" class="nav-btn" data-view="agente" aria-pressed="false">Agente</button>
+        <button type="button" class="nav-btn" data-view="qualidade" aria-pressed="false">Qualidade</button>
+        <button type="button" class="nav-btn" data-view="deepdive" aria-pressed="false">Deep dive</button>
       </nav>
 
       <p class="aviso-box">
-        Dados ainda não conectados à fonte. Onde o valor estiver pendente, aparece
-        <strong>X</strong> como placeholder temporário.
+        A capa oficial vale com o filtro <strong>canal RECEPTIVE</strong>, dia <strong>9 nov 2026</strong>.
+        O export anterior (1 jan–26 out, sem esse canal) estava filtrado errado e saiu do painel.
+        O que essa capa não traz continua como <strong>X</strong>. Sinfonia segue no recorte do agente.
       </p>
 
       <main class="main section-gap">
         <section id="view-dia" class="view">
           <header class="view-header">
-            <span class="badge">Resultados financeiros</span>
-            <h2>Receita e ticket do dia</h2>
-            <p>Comparativo versus meta do canal — mesma leitura do report diário.</p>
+            <span class="badge">9 nov 2026</span>
+            <span class="scope scope-canal">Canal RECEPTIVE</span>
+            <h2>Receita e funil do dia</h2>
+            <p>Dashboard Oficial LD atualizado. A variação do card é contra o ano anterior. Meta do report diário não está neste print.</p>
           </header>
-
           <div class="panel">
             <div class="kpi-row">
               <article class="kpi kpi-main">
-                <span class="kpi-label">Receita bruta total</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-                <span class="kpi-delta is-placeholder">X vs meta</span>
+                <span class="kpi-label">Receita transacionada</span>
+                <strong class="kpi-value">R$ 216,6 mil</strong>
+                <span class="kpi-delta is-up">+1.504,6% vs AA</span>
               </article>
               <article class="kpi">
                 <span class="kpi-label">Boleto médio</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-                <span class="kpi-delta is-placeholder">X vs meta</span>
+                <strong class="kpi-value">R$ 225</strong>
+                <span class="kpi-delta is-up">+R$ 7,66 vs AA</span>
               </article>
               <article class="kpi">
-                <span class="kpi-label">Meta receita</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-                <span class="kpi-delta muted">referência do dia</span>
+                <span class="kpi-label">Leads</span>
+                <strong class="kpi-value">25,1 mil</strong>
+                <span class="kpi-delta is-up">+19,2 mil vs AA</span>
               </article>
               <article class="kpi">
-                <span class="kpi-label">Meta boleto médio</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-                <span class="kpi-delta muted">referência do dia</span>
+                <span class="kpi-label">Encaminhamento</span>
+                <strong class="kpi-value">35,1%</strong>
+                <span class="kpi-delta is-up">+2,3% vs AA</span>
               </article>
+              <article class="kpi">
+                <span class="kpi-label">Atendimento</span>
+                <strong class="kpi-value">90%</strong>
+                <span class="kpi-delta is-down">−6,8% vs AA</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Conversão D+0</span>
+                <strong class="kpi-value">12,1%</strong>
+                <span class="kpi-delta is-up">+8,8% vs AA</span>
+              </article>
+            </div>
+            <p class="def">
+              <strong>D+0:</strong> conversão dentro do próprio WhatsApp.
+              Contra a meta do dia, receita, boleto, leads e taxas seguem <strong>X</strong>.
+            </p>
+          </div>
+        </section>
+
+        <section id="view-canal" class="view">
+          <header class="view-header">
+            <span class="badge">9 nov 2026</span>
+            <span class="scope scope-canal">Canal RECEPTIVE</span>
+            <h2>Volume, tempo e o que a capa não abre</h2>
+            <p>Mesma página do dash, no filtro certo. Acumulado do ano e D+7 não vieram neste export.</p>
+          </header>
+          <div class="panel">
+            <h3 class="section-title">Na capa</h3>
+            <div class="kpi-row">
+              <article class="kpi">
+                <span class="kpi-label">Atendidos</span>
+                <strong class="kpi-value">8 mil</strong>
+                <span class="kpi-delta is-up">+6.038 vs AA</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Encaminhamentos</span>
+                <strong class="kpi-value">8,8 mil</strong>
+                <span class="kpi-delta is-up">+6.869 vs AA</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">TME</span>
+                <strong class="kpi-value">05:28</strong>
+                <span class="kpi-delta is-up">−00:21:49 vs AA</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Receita vs AA em R$</span>
+                <strong class="kpi-value">+R$ 204,09 mil</strong>
+                <span class="kpi-delta">sobre a base do ano anterior</span>
+              </article>
+            </div>
+            <p class="def">TME é o tempo médio entre encaminhamento e atendimento.</p>
+          </div>
+          <div class="panel">
+            <h3 class="section-title">Fora deste print</h3>
+            <div class="kpi-row">
+              <article class="kpi">
+                <span class="kpi-label">Conversão D+7</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Receita D+7</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">BM D+7</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Acumulado do ano</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+            </div>
+            <p class="def">D+7 é a conversão em loja até 7 dias, nos leads atendidos que não converteram no WhatsApp.</p>
+          </div>
+        </section>
+
+        <section id="view-meta" class="view">
+          <header class="view-header">
+            <span class="badge">Meta</span>
+            <span class="scope scope-pendente">Filtro anterior descartado</span>
+            <h2>Realizado contra meta</h2>
+            <p>A página de meta do primeiro export não vale. O dash atualizado não traz essa visão.</p>
+          </header>
+          <div class="panel">
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Indicador</th>
+                    <th class="num">Realizado</th>
+                    <th class="num">vs meta</th>
+                    <th class="num">vs A.A.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Leads</td><td class="num">25,1 mil</td><td class="num is-placeholder">X</td><td class="num">+19,2 mil</td></tr>
+                  <tr><td>Encaminhamento</td><td class="num">8,8 mil</td><td class="num is-placeholder">X</td><td class="num">+6.869</td></tr>
+                  <tr><td>% Encaminhamento</td><td class="num">35,1%</td><td class="num is-placeholder">X</td><td class="num">+2,3%</td></tr>
+                  <tr><td>Atendimento</td><td class="num">8 mil</td><td class="num is-placeholder">X</td><td class="num">+6.038</td></tr>
+                  <tr><td>% Atendimento</td><td class="num">90%</td><td class="num is-placeholder">X</td><td class="num">−6,8%</td></tr>
+                  <tr><td>% Conversão D+0</td><td class="num">12,1%</td><td class="num is-placeholder">X</td><td class="num">+8,8%</td></tr>
+                  <tr><td>Receita</td><td class="num">R$ 216,6 mil</td><td class="num is-placeholder">X</td><td class="num">+1.504,6%</td></tr>
+                  <tr><td>Boleto médio</td><td class="num">R$ 225</td><td class="num is-placeholder">X</td><td class="num">+R$ 7,66</td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
-        <section id="view-funil" class="view">
+        <section id="view-origens" class="view">
           <header class="view-header">
-            <span class="badge">Funil &amp; operação</span>
-            <h2>Leads → encaminhamento → atendimento → conversão</h2>
-            <p>Taxas do funil operacional do Agente CVM no dia.</p>
+            <span class="badge">Origem do lead</span>
+            <span class="scope scope-pendente">Sem tabela neste export</span>
+            <h2>Funil por origem no canal RECEPTIVE</h2>
+            <p>O filtro de origem existe na capa. A quebra numérica do export anterior foi descartada com o filtro errado.</p>
           </header>
-
           <div class="panel">
-            <h3 class="section-title">Etapas</h3>
-            <div class="funnel" aria-label="Funil operacional">
-              <div class="funnel-step">
-                <div>
-                  <div class="funnel-step-name">Leads</div>
-                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
-                </div>
-                <div class="funnel-step-value is-placeholder">X</div>
-                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Origem</th>
+                    <th class="num">Leads</th>
+                    <th class="num">Enc.</th>
+                    <th class="num">Conv. D+0</th>
+                    <th class="num">Receita D+0</th>
+                    <th class="num">BM D+0</th>
+                    <th class="num">Conv. D+7</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Ativo</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>Orgânico</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>Redes sociais</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>MKT regional</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>Mídia indústria</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>E-commerce</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>Canal loja</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>CRM</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                  <tr><td>LD ativo</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td><td class="num is-placeholder">X</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-ativo" class="view">
+          <header class="view-header">
+            <span class="badge">Missões</span>
+            <span class="scope scope-pendente">Sem página neste export</span>
+            <h2>Funil das ativações</h2>
+            <p>O print atualizado é só a capa RECEPTIVE. Missões, estratégia e GMV 21d ficam de fora até um export com o mesmo filtro.</p>
+          </header>
+          <div class="panel">
+            <div class="kpi-row">
+              <article class="kpi"><span class="kpi-label">Missões geradas</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">Entrega</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">Interação</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">Opt-out</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">Transbordo</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">Conversão 21d</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">GMV influenciado 21d</span><strong class="kpi-value is-placeholder">X</strong></article>
+              <article class="kpi"><span class="kpi-label">Performance vs relacional</span><strong class="kpi-value is-placeholder">X</strong></article>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-agente" class="view">
+          <header class="view-header">
+            <span class="badge">Sinfonia · agente Consumidor CVM</span>
+            <span class="scope scope-agente">Agente</span>
+            <h2>Volume, tempo e segurança da conversa</h2>
+            <p>Print com eixo diário de 4 set a 7 nov 2026. Aplicação Consumidor, agente CVM.</p>
+          </header>
+          <div class="stack">
+            <div class="panel">
+              <h3 class="section-title">Mensagens e conversas</h3>
+              <div class="kpi-row">
+                <article class="kpi kpi-main">
+                  <span class="kpi-label">Conversas</span>
+                  <strong class="kpi-value">85.680</strong>
+                  <span class="kpi-delta">média 1.680 / dia</span>
+                </article>
+                <article class="kpi">
+                  <span class="kpi-label">Mensagens</span>
+                  <strong class="kpi-value">590.080</strong>
+                  <span class="kpi-delta">média 11.570 / dia</span>
+                </article>
+                <article class="kpi">
+                  <span class="kpi-label">Msgs / conversa</span>
+                  <strong class="kpi-value">6,89</strong>
+                  <span class="kpi-delta">50% agente · 50% usuário</span>
+                </article>
+                <article class="kpi">
+                  <span class="kpi-label">Engajamento</span>
+                  <strong class="kpi-value">60,0%</strong>
+                  <span class="kpi-delta">51.407 conversas com 2+ msgs do usuário</span>
+                </article>
               </div>
-              <div class="funnel-step">
-                <div>
-                  <div class="funnel-step-name">Encaminhamento</div>
-                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
-                </div>
-                <div class="funnel-step-value is-placeholder">X</div>
-                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+            </div>
+            <div class="split-grid">
+              <div class="panel">
+                <h3 class="section-title">Duração e latência</h3>
+                <ul class="compare-list">
+                  <li class="compare-item"><span>Duração mediana</span><strong>0,82 min</strong></li>
+                  <li class="compare-item"><span>Duração p95</span><strong>207 min</strong></li>
+                  <li class="compare-item"><span>Duração máxima</span><strong>65.152 min</strong></li>
+                  <li class="compare-item"><span>Latência mediana da IA</span><strong>5,36 s</strong></li>
+                  <li class="compare-item"><span>Latência p95</span><strong>12,06 s</strong></li>
+                  <li class="compare-item"><span>Latência máxima</span><strong>3.693 s</strong></li>
+                  <li class="compare-item"><span>Volume por faixa de duração</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Volume por faixa de latência</span><strong class="is-placeholder">X</strong></li>
+                </ul>
               </div>
-              <div class="funnel-step">
-                <div>
-                  <div class="funnel-step-name">Atendimento</div>
-                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
-                </div>
-                <div class="funnel-step-value is-placeholder">X</div>
-                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+              <div class="panel">
+                <h3 class="section-title">Mídia do usuário e moderação</h3>
+                <ul class="compare-list">
+                  <li class="compare-item"><span>Texto</span><strong>66,4%</strong></li>
+                  <li class="compare-item"><span>Botão</span><strong>29,9%</strong></li>
+                  <li class="compare-item"><span>Localização</span><strong>3,7%</strong></li>
+                  <li class="compare-item"><span>Imagem</span><strong>0%</strong></li>
+                  <li class="compare-item"><span>Outros</span><strong>0%</strong></li>
+                  <li class="compare-item"><span>Taxa de moderação</span><strong>1,47%</strong></li>
+                  <li class="compare-item"><span>Conversas moderadas</span><strong>1.260</strong></li>
+                </ul>
               </div>
-              <div class="funnel-step">
-                <div>
-                  <div class="funnel-step-name">Conversão</div>
-                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
-                </div>
-                <div class="funnel-step-value is-placeholder">X</div>
-                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+            </div>
+            <div class="panel">
+              <h3 class="section-title">Motivo da moderação</h3>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Motivo</th>
+                      <th class="num">Conversas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Injeção de prompt</td><td class="num">858</td></tr>
+                    <tr><td>Conteúdo ilícito</td><td class="num">274</td></tr>
+                    <tr><td>Outros</td><td class="num">103</td></tr>
+                    <tr><td>Assédio</td><td class="num">13</td></tr>
+                    <tr><td>Conteúdo sexual</td><td class="num">6</td></tr>
+                    <tr><td>Autolesão</td><td class="num">3</td></tr>
+                    <tr><td>Violência</td><td class="num">3</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-qualidade" class="view">
+          <header class="view-header">
+            <span class="badge">Agente validador</span>
+            <span class="scope scope-agente">Agente</span>
+            <h2>Avaliação da resposta</h2>
+            <p>Sinfonia · base de conhecimento da campanha Dia das Crianças. As taxas do dia 9 nov não usam a mesma janela dos pontos fortes.</p>
+          </header>
+          <div class="stack">
+            <div class="panel">
+              <h3 class="section-title">9 nov 2026 · 338 mensagens</h3>
+              <div class="kpi-row">
+                <article class="kpi">
+                  <span class="kpi-label">Adequação</span>
+                  <strong class="kpi-value">53,5%</strong>
+                </article>
+                <article class="kpi">
+                  <span class="kpi-label">Satisfação</span>
+                  <strong class="kpi-value">51,2%</strong>
+                </article>
+                <article class="kpi">
+                  <span class="kpi-label">Similaridade</span>
+                  <strong class="kpi-value">13,0%</strong>
+                </article>
+                <article class="kpi">
+                  <span class="kpi-label">Alucinação</span>
+                  <strong class="kpi-value">2,1%</strong>
+                </article>
+              </div>
+            </div>
+            <div class="split-grid">
+              <div class="panel">
+                <h3 class="section-title">Pontos fortes · 27 out – 9 nov</h3>
+                <ul class="compare-list">
+                  <li class="compare-item"><span>Clareza e objetividade</span><strong>67,26%</strong></li>
+                  <li class="compare-item"><span>Triagem e encaminhamento assertivo</span><strong>45,5%</strong></li>
+                  <li class="compare-item"><span>Uso da base de conhecimento</span><strong>38,4%</strong></li>
+                  <li class="compare-item"><span>Empatia e acolhimento</span><strong>29,19%</strong></li>
+                  <li class="compare-item"><span>Agilidade e prontidão</span><strong>27,29%</strong></li>
+                  <li class="compare-item"><span>Envio de recursos de apoio</span><strong>14,89%</strong></li>
+                  <li class="compare-item"><span>Gatilhos promocionais</span><strong>9,76%</strong></li>
+                  <li class="compare-item"><span>Consultoria proativa</span><strong>7,44%</strong></li>
+                  <li class="compare-item"><span>Detalhamento e completude</span><strong>5,89%</strong></li>
+                  <li class="compare-item"><span>Personalização e contexto</span><strong>5,65%</strong></li>
+                  <li class="compare-item"><span>Argumentação de valor</span><strong>5,47%</strong></li>
+                  <li class="compare-item"><span>Tom motivacional</span><strong>4,42%</strong></li>
+                  <li class="compare-item"><span>Recursos visuais</span><strong>0,61%</strong></li>
+                </ul>
+              </div>
+              <div class="panel">
+                <h3 class="section-title">Pontos fracos · 27 out – 9 nov</h3>
+                <ul class="compare-list">
+                  <li class="compare-item"><span>Omissão de dados críticos</span><strong>43,06%</strong></li>
+                  <li class="compare-item"><span>Ausência de sondagem</span><strong>24,17%</strong></li>
+                  <li class="compare-item"><span>Sem ponto fraco identificado</span><strong>23,94%</strong></li>
+                  <li class="compare-item"><span>Ignora histórico ou contexto</span><strong>21,66%</strong></li>
+                  <li class="compare-item"><span>Falha na triagem ou transferência</span><strong>19,07%</strong></li>
+                  <li class="compare-item"><span>Falta de detalhe do procedimento</span><strong>17,71%</strong></li>
+                  <li class="compare-item"><span>Oferta sem personalização</span><strong>17,5%</strong></li>
+                  <li class="compare-item"><span>Resposta vaga ou genérica</span><strong>14,69%</strong></li>
+                  <li class="compare-item"><span>Falta de call to action</span><strong>10,98%</strong></li>
+                  <li class="compare-item"><span>Sem checagem de entendimento</span><strong>7,11%</strong></li>
+                  <li class="compare-item"><span>Erro técnico ou link quebrado</span><strong>4,37%</strong></li>
+                  <li class="compare-item"><span>Repetitividade (loop)</span><strong>4,18%</strong></li>
+                  <li class="compare-item"><span>Linguagem inadequada</span><strong>1,55%</strong></li>
+                  <li class="compare-item"><span>Texto longo demais</span><strong>0,4%</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="split-grid">
+              <div class="panel">
+                <h3 class="section-title">Motivos de contato</h3>
+                <ul class="compare-list">
+                  <li class="compare-item"><span>Realizar pedido</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Problemas com pagamento</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Limite de crédito</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Solicitação de boleto</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Solicitação de catálogos</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Solicitação de promoções</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Formas de pagamento</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Cancelamento de pedidos</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Frete</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Outros</span><strong class="is-placeholder">X</strong></li>
+                </ul>
+                <p class="def">O gráfico do print não trouxe o percentual de cada motivo. Principais dúvidas da tabela vieram nulas.</p>
+              </div>
+              <div class="panel">
+                <h3 class="section-title">Sentimento inicial → final</h3>
+                <ul class="compare-list">
+                  <li class="compare-item"><span>Neutro</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Frustração</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Confusão</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Satisfação</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Sem sentimento</span><strong class="is-placeholder">X</strong></li>
+                </ul>
+                <p class="def">O fluxo do print nomeia os sentimentos e não a participação de cada um.</p>
               </div>
             </div>
           </div>
@@ -126,56 +427,45 @@
 
         <section id="view-deepdive" class="view">
           <header class="view-header">
-            <span class="badge">Deep dive Agente CVM</span>
-            <h2>Transbordo e carrinhos</h2>
+            <span class="badge">Quebra do agente</span>
+            <span class="scope scope-pendente">Fora dos dois prints</span>
+            <h2>Transbordo do Agente CVM</h2>
             <p>
-              Quebra de transbordo imediato vs aquecido — prevista com mais granularidade na V2 do
-              painel.
+              Imediato versus aquecido, carrinho e GMV por tipo não estão no dash LD nem no recorte do agente na Sinfonia.
+              O transbordo da Sinfonia neste print é o consolidado da plataforma, com vários agentes.
             </p>
           </header>
-
           <div class="split-grid">
             <div class="panel">
-              <h3 class="section-title">Mix de transbordo</h3>
+              <h3 class="section-title">O que o report diário pede</h3>
               <ul class="compare-list">
-                <li class="compare-item">
-                  <span>% Transbordo imediato</span>
-                  <strong class="is-placeholder">X</strong>
-                </li>
-                <li class="compare-item">
-                  <span>% Transbordo aquecido</span>
-                  <strong class="is-placeholder">X</strong>
-                </li>
-                <li class="compare-item">
-                  <span>% Carrinhos montados</span>
-                  <strong class="is-placeholder">X</strong>
-                </li>
+                <li class="compare-item"><span>% Transbordo imediato</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>% Transbordo aquecido</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>% Carrinhos montados</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>BM transbordo imediato</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>BM transbordo aquecido</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>GMV por tipo de transbordo</span><strong class="is-placeholder">X</strong></li>
               </ul>
             </div>
             <div class="panel">
-              <h3 class="section-title">Boleto médio por tipo</h3>
+              <h3 class="section-title">Destino final na Sinfonia</h3>
               <ul class="compare-list">
-                <li class="compare-item">
-                  <span>BM transbordo imediato</span>
-                  <strong class="is-placeholder">X</strong>
-                </li>
-                <li class="compare-item">
-                  <span>BM transbordo aquecido</span>
-                  <strong class="is-placeholder">X</strong>
-                </li>
-                <li class="compare-item">
-                  <span>GMV por tipo de transbordo</span>
-                  <strong class="is-placeholder">X</strong>
-                </li>
+                <li class="compare-item"><span>Retenção</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>CAR</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>Chat VDI</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>Supervisor</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>Não especificado</span><strong class="is-placeholder">X</strong></li>
+                <li class="compare-item"><span>Msgs / conversa no transbordo do CVM</span><strong class="is-placeholder">X</strong></li>
               </ul>
+              <p class="def">Taxonomia pronta. O percentual do Agente CVM entra quando o filtro do agente estiver aplicado.</p>
             </div>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        <span>Time: Interfaces Conversacionais · Growth CVM</span>
-        <span>Placeholders <code>X</code> até a ingestão de dados</span>
+        <span>Fontes: Dashboard Oficial LD · Plataforma Sinfonia</span>
+        <span><code>X</code> = métrica ausente nesses recortes</span>
       </footer>
     </div>
 

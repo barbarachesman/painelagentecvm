@@ -15,8 +15,8 @@ function include(filename) {
 }
 
 /**
- * Stub de dados do dia. Enquanto a fonte não estiver ligada, devolve X.
- * Formato alinhado ao report diário do canal de acompanhamento.
+ * Stub do report diário. Os acumulados do Dashboard Oficial LD e da Sinfonia
+ * estão no markup de Index.html. O que esses recortes não cobrem continua X.
  */
 function getDailySnapshot() {
   return {
