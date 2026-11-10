@@ -31,7 +31,8 @@ O dash LD vale só com o filtro **canal RECEPTIVE** em **9 nov 2026**. O export 
 
 - **Dia:** receita, boleto, leads, encaminhamento, atendimento e conversão D+0, contra o ano anterior
 - **Canal:** atendidos, encaminhamentos e TME do mesmo dia. D+7 e acumulado do ano seguem `X`
-- **Vs meta:** realizado do dia preenchido; coluna de meta segue `X`
+- **Vs meta:** meta diária de `ssbx-consumidor-prod-dig.loja_digital.metas_diarizadas`, canal RECEPTIVE, só BOT, de 3 a 9 nov 2026. Sábado e domingo levam `*`. O realizado continua o da capa de 9 nov
 - **Origens e ativo:** estrutura mantida, números `X` até um export com o mesmo filtro
 - **Agente e qualidade:** Sinfonia, recorte do agente CVM
 - **Retenção:** motivos pelos quais o lead não foi para a consultora, com volume e participação do mapeamento passado. Comparação vs dia anterior e vs semana anterior fica `X` até haver série. Transbordo imediato/aquecido também segue `X`
+- **Eventos:** último evento antes do abandono em 9 nov 2026. `sensitive-trusted.chatbotcvm.tb_evento` não está liberada nesta conexão; a cópia acessível para em 13 out 2026, então o dia fica `X`
