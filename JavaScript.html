@@ -60,8 +60,6 @@
       if (greeting) greeting.textContent = 'ontem · ' + formatGreetingDate(yday.date);
       const badge = document.getElementById('dia-badge');
       if (badge) badge.textContent = short;
-      const banner = document.getElementById('dia-banner');
-      if (banner) banner.textContent = short;
 
       const hasCover = yday.iso === COVER_ISO;
       document.querySelectorAll('#view-dia .js-dia-value').forEach(function (el) {
