@@ -35,4 +35,4 @@ O dash LD vale só com o filtro **canal RECEPTIVE** em **9 nov 2026**. O export 
 - **Origens e ativo:** estrutura mantida, números `X` até um export com o mesmo filtro
 - **Agente e qualidade:** Sinfonia, recorte do agente CVM
 - **Retenção:** participação em 10 nov, em 2 nov e no período de 2 a 9 nov, da planilha histórico de retenção. A variação colorida é 10 nov contra 2 nov. O volume de sessões não veio nesse recorte
-- **Não transbordo:** deep dive das cinco categorias por trás do encaminhamento de 9 nov (35,1% contra meta BOT de 46,4%). A participação é a de 10 nov, contra 2 nov, com a faixa de 2 a 9 nov ao lado. Eventos antes do abandono, fricções e exemplos de conversa ficam `X` até os recortes quantitativo e qualitativo
+- **Não transbordo:** cada categoria abre no clique. O deep dive traz uma frase de insight e três resumos de conversa. Os dois ficam `X` até a leitura qualitativa. A participação na linha é a de 10 nov, contra 2 nov, com a faixa de 2 a 9 nov

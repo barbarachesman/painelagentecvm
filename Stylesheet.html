@@ -621,33 +621,117 @@
     min-width: 4px;
   }
 
-  .dive-slots {
+  .dive-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
-    margin-top: 0.9rem;
+    gap: 0.15rem;
+    margin-top: 0.35rem;
   }
 
-  .dive-slot {
-    background: var(--creme);
-    border-radius: 14px;
-    padding: 0.75rem 0.85rem;
-    display: grid;
-    gap: 0.2rem;
+  .dive-item + .dive-item {
+    border-top: 1px solid var(--borda);
+    margin-top: 0.35rem;
+    padding-top: 0.55rem;
   }
 
-  .dive-slot span {
-    color: var(--texto);
+  .dive-toggle {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) auto auto;
+    gap: 0.35rem 0.85rem;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 0.45rem 0.35rem;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dive-toggle:hover {
+    background: rgba(43, 78, 232, 0.05);
+  }
+
+  .dive-toggle:hover .retencao-copy strong {
+    color: var(--azul);
+  }
+
+  .dive-toggle:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+  }
+
+  .dive-action {
+    align-self: center;
+    color: var(--azul);
     font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
-  .dive-slot strong {
+  .dive-body {
+    margin: 0.35rem 0.35rem 0.55rem;
+    background: var(--creme);
+    border-radius: 16px;
+    padding: 0.9rem 1rem 1rem;
+  }
+
+  .dive-kicker {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--azul);
+  }
+
+  .dive-insight {
+    margin: 0.3rem 0 0.9rem;
+    color: var(--navy);
+    font-size: 1rem;
+  }
+
+  .dive-insight.is-placeholder,
+  .dive-talks .is-placeholder {
     color: var(--recesso);
-    font-size: 1.35rem;
-    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .dive-talks {
+    list-style: none;
+    margin: 0.45rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .dive-talks li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: center;
+    background: var(--branco);
+    border-radius: 12px;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .dive-talks li > span {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 999px;
+    background: var(--pill);
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+
+  .dive-talks p {
+    margin: 0;
   }
 
   .data-table td.is-placeholder {
@@ -662,9 +746,17 @@
   .retencao-bar .tom-5 { background: var(--texto); }
 
   @media (max-width: 860px) {
-    .split-grid,
-    .dive-slots {
+    .split-grid {
       grid-template-columns: 1fr;
+    }
+
+    .dive-toggle {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .dive-toggle .retencao-stats {
+      grid-column: 1 / -1;
+      justify-content: flex-start;
     }
 
     .nav {
