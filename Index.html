@@ -36,7 +36,7 @@
         <button type="button" class="nav-btn" data-view="agente" aria-pressed="false">Agente</button>
         <button type="button" class="nav-btn" data-view="qualidade" aria-pressed="false">Qualidade</button>
         <button type="button" class="nav-btn" data-view="retencao" aria-pressed="false">Retenção</button>
-        <button type="button" class="nav-btn" data-view="eventos" aria-pressed="false">Eventos</button>
+        <button type="button" class="nav-btn" data-view="eventos" aria-pressed="false">Não transbordo</button>
       </nav>
 
       <p class="aviso-box">
@@ -535,6 +535,7 @@
             <p class="def">
               Volume e participação são o mapeamento passado desses motivos (202.664 sessões).
               A comparação com o dia e a semana anteriores ainda não veio nesse recorte, por isso fica <strong>X</strong>.
+              O deep dive de cada categoria, com eventos, fricções e exemplos, está em Não transbordo.
               Imediato vs aquecido, carrinho e GMV por tipo de transbordo também seguem <strong>X</strong>.
             </p>
           </div>
@@ -543,30 +544,165 @@
         <section id="view-eventos" class="view">
           <header class="view-header">
             <span class="badge">9 nov 2026</span>
-            <span class="scope scope-pendente">Sem leitura da tabela</span>
-            <h2>Último evento antes de abandonar</h2>
-            <p>Ontem. Entra a sessão que disparou o evento de abandono. O que vale é o evento anterior, fora a mensagem de reengajamento.</p>
+            <span class="scope scope-canal">Canal RECEPTIVE · BOT</span>
+            <h2>Não transbordo</h2>
+            <p>
+              Encaminhamento do dia em 35,1%, contra meta de 46,4% (−11,3%).
+              O volume encaminhado ficou em 8,8 mil, acima da meta de 7.731 (+1.069).
+              As cinco categorias explicam quem não foi para a consultora.
+            </p>
           </header>
           <div class="panel">
-            <div class="kpi-row">
-              <article class="kpi">
-                <span class="kpi-label">Sessões abandonadas</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">Principal evento antes</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">Participação</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-            </div>
+            <h3 class="section-title">Principais eventos antes do abandono</h3>
             <p class="def">
-              A tabela <code>sensitive-trusted.chatbotcvm.tb_evento</code> não abriu nesta conexão.
-              A cópia acessível para em 13 out 2026, então o dia 9 nov fica <strong>X</strong>.
+              Leitura quantitativa da sessão que abandonou, pelo último evento antes do abandono, em cada categoria de retenção.
             </p>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Categoria</th>
+                    <th>Evento antes do abandono</th>
+                    <th class="num">Sessões</th>
+                    <th class="num">% part.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Durante a busca ou seleção</td>
+                    <td class="is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                  </tr>
+                  <tr>
+                    <td>Escolha da loja</td>
+                    <td class="is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                  </tr>
+                  <tr>
+                    <td>Pós-exibição de carrossel</td>
+                    <td class="is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                  </tr>
+                  <tr>
+                    <td>1ª ou 2ª interação</td>
+                    <td class="is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                  </tr>
+                  <tr>
+                    <td>Produto/fragrância não encontrada</td>
+                    <td class="is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                    <td class="num is-placeholder">X</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="def">O ranking entra com o recorte de eventos. A leitura qualitativa entra em cada categoria abaixo.</p>
           </div>
+
+          <article class="panel dive-card">
+            <div class="retencao-head">
+              <div class="retencao-copy">
+                <strong>1. Durante a busca ou seleção</strong>
+                <span>Sondagem sem decisão</span>
+              </div>
+              <div class="retencao-stats">
+                <b>100.642 · 49,66%</b>
+                <span class="is-placeholder">X vs dia</span>
+                <span class="is-placeholder">X vs semana</span>
+              </div>
+            </div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 49.66%"></span></div>
+            <div class="dive-slots">
+              <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Exemplos de conversa</span><strong class="is-placeholder">X</strong></div>
+            </div>
+          </article>
+          <article class="panel dive-card">
+            <div class="retencao-head">
+              <div class="retencao-copy">
+                <strong>2. Escolha da loja</strong>
+                <span>Indisponibilidade ou loja fechada</span>
+              </div>
+              <div class="retencao-stats">
+                <b>25.689 · 12,68%</b>
+                <span class="is-placeholder">X vs dia</span>
+                <span class="is-placeholder">X vs semana</span>
+              </div>
+            </div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 12.68%"></span></div>
+            <div class="dive-slots">
+              <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Exemplos de conversa</span><strong class="is-placeholder">X</strong></div>
+            </div>
+          </article>
+          <article class="panel dive-card">
+            <div class="retencao-head">
+              <div class="retencao-copy">
+                <strong>3. Pós-exibição de carrossel</strong>
+                <span>Visualização de valores</span>
+              </div>
+              <div class="retencao-stats">
+                <b>62.309 · 30,74%</b>
+                <span class="is-placeholder">X vs dia</span>
+                <span class="is-placeholder">X vs semana</span>
+              </div>
+            </div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 30.74%"></span></div>
+            <div class="dive-slots">
+              <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Exemplos de conversa</span><strong class="is-placeholder">X</strong></div>
+            </div>
+          </article>
+          <article class="panel dive-card">
+            <div class="retencao-head">
+              <div class="retencao-copy">
+                <strong>4. 1ª ou 2ª interação</strong>
+                <span>Fuga em anúncio CTWA</span>
+              </div>
+              <div class="retencao-stats">
+                <b>10.175 · 5,02%</b>
+                <span class="is-placeholder">X vs dia</span>
+                <span class="is-placeholder">X vs semana</span>
+              </div>
+            </div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 5.02%"></span></div>
+            <div class="dive-slots">
+              <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Exemplos de conversa</span><strong class="is-placeholder">X</strong></div>
+            </div>
+          </article>
+          <article class="panel dive-card">
+            <div class="retencao-head">
+              <div class="retencao-copy">
+                <strong>5. Produto/fragrância não encontrada</strong>
+                <span>Ruptura ou concorrentes</span>
+              </div>
+              <div class="retencao-stats">
+                <b>3.849 · 1,90%</b>
+                <span class="is-placeholder">X vs dia</span>
+                <span class="is-placeholder">X vs semana</span>
+              </div>
+            </div>
+            <div class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 1.9%"></span></div>
+            <div class="dive-slots">
+              <div class="dive-slot"><span>Eventos antes do abandono</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Fricções</span><strong class="is-placeholder">X</strong></div>
+              <div class="dive-slot"><span>Exemplos de conversa</span><strong class="is-placeholder">X</strong></div>
+            </div>
+          </article>
+          <p class="def">
+            Volume e participação são o mapeamento passado (202.664 sessões), ainda sem comparação com o dia e a semana anteriores.
+            Eventos, fricções e exemplos de conversa entram quando os dois recortes chegarem.
+          </p>
         </section>
       </main>
 
