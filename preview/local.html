@@ -518,6 +518,16 @@
     color: var(--recesso);
   }
 
+  .data-table .num.is-up { color: var(--up); }
+  .data-table .num.is-down { color: var(--down); }
+
+  sup.fds {
+    color: var(--evento);
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-left: 0.1rem;
+  }
+
   .data-table tr.is-total td {
     color: var(--navy);
     font-weight: 700;
@@ -680,6 +690,7 @@
         <button type="button" class="nav-btn" data-view="agente" aria-pressed="false">Agente</button>
         <button type="button" class="nav-btn" data-view="qualidade" aria-pressed="false">Qualidade</button>
         <button type="button" class="nav-btn" data-view="retencao" aria-pressed="false">Retenção</button>
+        <button type="button" class="nav-btn" data-view="eventos" aria-pressed="false">Eventos</button>
       </nav>
 
       <p class="aviso-box">
@@ -694,7 +705,7 @@
             <span class="badge">9 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE</span>
             <h2>Receita e funil do dia</h2>
-            <p>Dashboard Oficial LD atualizado. A variação do card é contra o ano anterior. Meta do report diário não está neste print.</p>
+            <p>Dashboard Oficial LD atualizado. A variação do card é contra o ano anterior. A meta diária está em Vs meta.</p>
           </header>
           <div class="panel">
             <div class="kpi-row">
@@ -731,7 +742,7 @@
             </div>
             <p class="def">
               <strong>D+0:</strong> conversão dentro do próprio WhatsApp.
-              Contra a meta do dia, receita, boleto, leads e taxas seguem <strong>X</strong>.
+              A meta do dia está na visão Vs meta.
             </p>
           </div>
         </section>
@@ -795,10 +806,10 @@
 
         <section id="view-meta" class="view">
           <header class="view-header">
-            <span class="badge">Meta</span>
-            <span class="scope scope-pendente">Filtro anterior descartado</span>
+            <span class="badge">9 nov 2026</span>
+            <span class="scope scope-canal">Canal RECEPTIVE</span>
             <h2>Realizado contra meta</h2>
-            <p>A página de meta do primeiro export não vale. O dash atualizado não traz essa visão.</p>
+            <p>Meta diária de BOT e QDB. O realizado é o da capa. 9 nov é segunda-feira.</p>
           </header>
           <div class="panel">
             <div class="table-scroll">
@@ -807,22 +818,51 @@
                   <tr>
                     <th>Indicador</th>
                     <th class="num">Realizado</th>
+                    <th class="num">Meta</th>
                     <th class="num">vs meta</th>
                     <th class="num">vs A.A.</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Leads</td><td class="num">25,1 mil</td><td class="num is-placeholder">X</td><td class="num">+19,2 mil</td></tr>
-                  <tr><td>Encaminhamento</td><td class="num">8,8 mil</td><td class="num is-placeholder">X</td><td class="num">+6.869</td></tr>
-                  <tr><td>% Encaminhamento</td><td class="num">35,1%</td><td class="num is-placeholder">X</td><td class="num">+2,3%</td></tr>
-                  <tr><td>Atendimento</td><td class="num">8 mil</td><td class="num is-placeholder">X</td><td class="num">+6.038</td></tr>
-                  <tr><td>% Atendimento</td><td class="num">90%</td><td class="num is-placeholder">X</td><td class="num">−6,8%</td></tr>
-                  <tr><td>% Conversão D+0</td><td class="num">12,1%</td><td class="num is-placeholder">X</td><td class="num">+8,8%</td></tr>
-                  <tr><td>Receita</td><td class="num">R$ 216,6 mil</td><td class="num is-placeholder">X</td><td class="num">+1.504,6%</td></tr>
-                  <tr><td>Boleto médio</td><td class="num">R$ 225</td><td class="num is-placeholder">X</td><td class="num">+R$ 7,66</td></tr>
+                  <tr><td>Leads</td><td class="num">25,1 mil</td><td class="num">16,7 mil</td><td class="num is-up">+8,4 mil</td><td class="num">+19,2 mil</td></tr>
+                  <tr><td>Encaminhamento</td><td class="num">8,8 mil</td><td class="num">7.766</td><td class="num is-up">+1.034</td><td class="num">+6.869</td></tr>
+                  <tr><td>% Encaminhamento</td><td class="num">35,1%</td><td class="num">46,4%</td><td class="num is-down">−11,3%</td><td class="num">+2,3%</td></tr>
+                  <tr><td>Atendimento</td><td class="num">8 mil</td><td class="num">7.665</td><td class="num is-up">+335</td><td class="num">+6.038</td></tr>
+                  <tr><td>% Atendimento</td><td class="num">90%</td><td class="num">98,7%</td><td class="num is-down">−8,7%</td><td class="num">−6,8%</td></tr>
+                  <tr><td>% Conversão D+0</td><td class="num">12,1%</td><td class="num">15,9%</td><td class="num is-down">−3,8%</td><td class="num">+8,8%</td></tr>
+                  <tr><td>Receita</td><td class="num">R$ 216,6 mil</td><td class="num">R$ 290,3 mil</td><td class="num is-down">−25,4%</td><td class="num">+1.504,6%</td></tr>
+                  <tr><td>Boleto médio</td><td class="num">R$ 225</td><td class="num">R$ 237,43</td><td class="num is-down">−R$ 12,43</td><td class="num">+R$ 7,66</td></tr>
                 </tbody>
               </table>
             </div>
+            <p class="def">25,1 mil, 8,8 mil e 8 mil entram na conta como 25.100, 8.800 e 8.000.</p>
+          </div>
+          <div class="panel">
+            <h3 class="section-title">Meta diária, 3 a 9 nov</h3>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Dia</th>
+                    <th class="num">Leads</th>
+                    <th class="num">Encaminhado</th>
+                    <th class="num">Atendimento</th>
+                    <th class="num">Conversão</th>
+                    <th class="num">Receita</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>3 nov</td><td class="num">17.536</td><td class="num">8.137</td><td class="num">8.032</td><td class="num">1.281</td><td class="num">R$ 304,0 mil</td></tr>
+                  <tr><td>4 nov</td><td class="num">18.700</td><td class="num">8.678</td><td class="num">8.565</td><td class="num">1.366</td><td class="num">R$ 324,3 mil</td></tr>
+                  <tr><td>5 nov</td><td class="num">20.115</td><td class="num">9.334</td><td class="num">9.214</td><td class="num">1.470</td><td class="num">R$ 349,0 mil</td></tr>
+                  <tr><td>6 nov</td><td class="num">18.497</td><td class="num">8.584</td><td class="num">8.473</td><td class="num">1.351</td><td class="num">R$ 320,9 mil</td></tr>
+                  <tr><td>7 nov<sup class="fds">*</sup></td><td class="num">14.077</td><td class="num">6.532</td><td class="num">6.447</td><td class="num">1.028</td><td class="num">R$ 244,1 mil</td></tr>
+                  <tr><td>8 nov<sup class="fds">*</sup></td><td class="num">6.239</td><td class="num">2.895</td><td class="num">2.857</td><td class="num">455</td><td class="num">R$ 108,0 mil</td></tr>
+                  <tr><td>9 nov</td><td class="num">16.734</td><td class="num">7.766</td><td class="num">7.665</td><td class="num">1.223</td><td class="num">R$ 290,3 mil</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="def"><sup class="fds">*</sup> Sábado ou domingo. De 3 a 9 nov, a meta de encaminhamento fica em 46,4%, a de atendimento em 98,7%, a de conversão em 15,9% e o boleto médio em R$ 237.</p>
           </div>
         </section>
 
@@ -1153,10 +1193,39 @@
             </p>
           </div>
         </section>
+
+        <section id="view-eventos" class="view">
+          <header class="view-header">
+            <span class="badge">9 nov 2026</span>
+            <span class="scope scope-pendente">Sem leitura da tabela</span>
+            <h2>Último evento antes de abandonar</h2>
+            <p>Ontem. Entra a sessão que disparou o evento de abandono. O que vale é o evento anterior, fora a mensagem de reengajamento.</p>
+          </header>
+          <div class="panel">
+            <div class="kpi-row">
+              <article class="kpi">
+                <span class="kpi-label">Sessões abandonadas</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Principal evento antes</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Participação</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+              </article>
+            </div>
+            <p class="def">
+              A tabela <code>sensitive-trusted.chatbotcvm.tb_evento</code> não abriu nesta conexão.
+              A cópia acessível para em 13 out 2026, então o dia 9 nov fica <strong>X</strong>.
+            </p>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
-        <span>Fontes: Dashboard Oficial LD · Sinfonia · mapeamento de retenção</span>
+        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · mapeamento de retenção</span>
         <span><code>X</code> = métrica ausente nesses recortes</span>
       </footer>
     </div>
