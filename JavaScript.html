@@ -1,0 +1,68 @@
+<script>
+  (function () {
+    const MONTHS = [
+      'janeiro',
+      'fevereiro',
+      'março',
+      'abril',
+      'maio',
+      'junho',
+      'julho',
+      'agosto',
+      'setembro',
+      'outubro',
+      'novembro',
+      'dezembro',
+    ];
+
+    const WEEKDAYS = [
+      'domingo',
+      'segunda-feira',
+      'terça-feira',
+      'quarta-feira',
+      'quinta-feira',
+      'sexta-feira',
+      'sábado',
+    ];
+
+    function formatGreetingDate(date) {
+      const weekday = WEEKDAYS[date.getDay()];
+      const day = date.getDate();
+      const month = MONTHS[date.getMonth()];
+      const year = date.getFullYear();
+      return weekday + ', ' + day + ' de ' + month + ' de ' + year;
+    }
+
+    function setGreetingDate() {
+      const el = document.getElementById('greeting-date');
+      if (!el) return;
+      el.textContent = formatGreetingDate(new Date());
+    }
+
+    function setActiveNav(viewId) {
+      document.querySelectorAll('.nav-btn').forEach(function (btn) {
+        const active = btn.getAttribute('data-view') === viewId;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    }
+
+    function bindNav() {
+      document.querySelectorAll('.nav-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const viewId = btn.getAttribute('data-view');
+          const section = document.getElementById('view-' + viewId);
+          setActiveNav(viewId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      setGreetingDate();
+      bindNav();
+    });
+  })();
+</script>

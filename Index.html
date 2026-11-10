@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel Funil · Agente CVM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Serif:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <?!= include('Stylesheet'); ?>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">CVM</span>
+          <p class="brand-name">Painel Funil</p>
+        </div>
+        <p class="header-note">Agente CVM · Interfaces Conversacionais</p>
+      </div>
+    </header>
+
+    <div class="page">
+      <p class="eyebrow" id="greeting-date"></p>
+      <h1 class="greeting">Funil e <em>performance</em> do Agente CVM</h1>
+
+      <nav class="nav" aria-label="Visões do painel">
+        <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">
+          Visão do dia
+        </button>
+        <button type="button" class="nav-btn" data-view="funil" aria-pressed="false">
+          Funil
+        </button>
+        <button type="button" class="nav-btn" data-view="deepdive" aria-pressed="false">
+          Deep dive
+        </button>
+      </nav>
+
+      <p class="aviso-box">
+        Dados ainda não conectados à fonte. Onde o valor estiver pendente, aparece
+        <strong>X</strong> como placeholder temporário.
+      </p>
+
+      <main class="main section-gap">
+        <section id="view-dia" class="view">
+          <header class="view-header">
+            <span class="badge">Resultados financeiros</span>
+            <h2>Receita e ticket do dia</h2>
+            <p>Comparativo versus meta do canal — mesma leitura do report diário.</p>
+          </header>
+
+          <div class="panel">
+            <div class="kpi-row">
+              <article class="kpi kpi-main">
+                <span class="kpi-label">Receita bruta total</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+                <span class="kpi-delta is-placeholder">X vs meta</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Boleto médio</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+                <span class="kpi-delta is-placeholder">X vs meta</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Meta receita</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+                <span class="kpi-delta muted">referência do dia</span>
+              </article>
+              <article class="kpi">
+                <span class="kpi-label">Meta boleto médio</span>
+                <strong class="kpi-value is-placeholder">X</strong>
+                <span class="kpi-delta muted">referência do dia</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-funil" class="view">
+          <header class="view-header">
+            <span class="badge">Funil &amp; operação</span>
+            <h2>Leads → encaminhamento → atendimento → conversão</h2>
+            <p>Taxas do funil operacional do Agente CVM no dia.</p>
+          </header>
+
+          <div class="panel">
+            <h3 class="section-title">Etapas</h3>
+            <div class="funnel" aria-label="Funil operacional">
+              <div class="funnel-step">
+                <div>
+                  <div class="funnel-step-name">Leads</div>
+                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
+                </div>
+                <div class="funnel-step-value is-placeholder">X</div>
+                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+              </div>
+              <div class="funnel-step">
+                <div>
+                  <div class="funnel-step-name">Encaminhamento</div>
+                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
+                </div>
+                <div class="funnel-step-value is-placeholder">X</div>
+                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+              </div>
+              <div class="funnel-step">
+                <div>
+                  <div class="funnel-step-name">Atendimento</div>
+                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
+                </div>
+                <div class="funnel-step-value is-placeholder">X</div>
+                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+              </div>
+              <div class="funnel-step">
+                <div>
+                  <div class="funnel-step-name">Conversão</div>
+                  <div class="funnel-step-meta is-placeholder">X vs meta</div>
+                </div>
+                <div class="funnel-step-value is-placeholder">X</div>
+                <div class="funnel-bar is-placeholder" aria-hidden="true"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-deepdive" class="view">
+          <header class="view-header">
+            <span class="badge">Deep dive Agente CVM</span>
+            <h2>Transbordo e carrinhos</h2>
+            <p>
+              Quebra de transbordo imediato vs aquecido — prevista com mais granularidade na V2 do
+              painel.
+            </p>
+          </header>
+
+          <div class="split-grid">
+            <div class="panel">
+              <h3 class="section-title">Mix de transbordo</h3>
+              <ul class="compare-list">
+                <li class="compare-item">
+                  <span>% Transbordo imediato</span>
+                  <strong class="is-placeholder">X</strong>
+                </li>
+                <li class="compare-item">
+                  <span>% Transbordo aquecido</span>
+                  <strong class="is-placeholder">X</strong>
+                </li>
+                <li class="compare-item">
+                  <span>% Carrinhos montados</span>
+                  <strong class="is-placeholder">X</strong>
+                </li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3 class="section-title">Boleto médio por tipo</h3>
+              <ul class="compare-list">
+                <li class="compare-item">
+                  <span>BM transbordo imediato</span>
+                  <strong class="is-placeholder">X</strong>
+                </li>
+                <li class="compare-item">
+                  <span>BM transbordo aquecido</span>
+                  <strong class="is-placeholder">X</strong>
+                </li>
+                <li class="compare-item">
+                  <span>GMV por tipo de transbordo</span>
+                  <strong class="is-placeholder">X</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Time: Interfaces Conversacionais · Growth CVM</span>
+        <span>Placeholders <code>X</code> até a ingestão de dados</span>
+      </footer>
+    </div>
+
+    <?!= include('JavaScript'); ?>
+  </body>
+</html>
