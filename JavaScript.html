@@ -62,21 +62,30 @@
       });
     }
 
+    const HOME_VIEWS = ['dia', 'retencao'];
+
+    function showViews(ids) {
+      document.querySelectorAll('.view').forEach(function (section) {
+        const viewId = section.id.replace('view-', '');
+        section.hidden = ids.indexOf(viewId) === -1;
+      });
+    }
+
     function bindNav() {
       document.querySelectorAll('.nav-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
           const viewId = btn.getAttribute('data-view');
-          const section = document.getElementById('view-' + viewId);
           setActiveNav(viewId);
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          showViews(viewId === 'dia' ? HOME_VIEWS : [viewId]);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
       setGreetingDate();
+      showViews(HOME_VIEWS);
+      setActiveNav('dia');
       bindNav();
       bindDives();
     });

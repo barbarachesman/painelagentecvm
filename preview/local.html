@@ -908,7 +908,7 @@
           </div>
         </section>
 
-        <section id="view-meta" class="view">
+        <section id="view-meta" class="view" hidden>
           <header class="view-header">
             <span class="badge">9 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE</span>
@@ -989,7 +989,7 @@
           </div>
         </section>
 
-        <section id="view-origens" class="view">
+        <section id="view-origens" class="view" hidden>
           <header class="view-header">
             <span class="badge">9 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE · BOT</span>
@@ -1026,7 +1026,7 @@
           </div>
         </section>
 
-        <section id="view-agente" class="view">
+        <section id="view-agente" class="view" hidden>
           <header class="view-header">
             <span class="badge">Sinfonia · agente Consumidor CVM</span>
             <span class="scope scope-agente">Agente</span>
@@ -1111,7 +1111,7 @@
           </div>
         </section>
 
-        <section id="view-qualidade" class="view">
+        <section id="view-qualidade" class="view" hidden>
           <header class="view-header">
             <span class="badge">Agente validador</span>
             <span class="scope scope-agente">Agente</span>
@@ -1211,8 +1211,8 @@
 
         <section id="view-retencao" class="view">
           <header class="view-header">
-            <span class="badge">9 nov 2026</span>
-            <span class="scope scope-canal">Canal RECEPTIVE · BOT</span>
+            <span class="badge">Agente CVM</span>
+            <span class="scope scope-agente">Motivos de retenção</span>
             <h2>Por que o lead não foi para a consultora</h2>
             <p>
               Encaminhamento do dia em 35,1%, contra meta de 46,4% (−11,3%).
@@ -1480,21 +1480,30 @@
       });
     }
 
+    const HOME_VIEWS = ['dia', 'retencao'];
+
+    function showViews(ids) {
+      document.querySelectorAll('.view').forEach(function (section) {
+        const viewId = section.id.replace('view-', '');
+        section.hidden = ids.indexOf(viewId) === -1;
+      });
+    }
+
     function bindNav() {
       document.querySelectorAll('.nav-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
           const viewId = btn.getAttribute('data-view');
-          const section = document.getElementById('view-' + viewId);
           setActiveNav(viewId);
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          showViews(viewId === 'dia' ? HOME_VIEWS : [viewId]);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
       setGreetingDate();
+      showViews(HOME_VIEWS);
+      setActiveNav('dia');
       bindNav();
       bindDives();
     });
