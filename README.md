@@ -30,9 +30,8 @@ Recortes estáticos do Dashboard Oficial LD e da Plataforma Sinfonia. O que o pr
 O dash LD vale só com o filtro **canal RECEPTIVE** em **9 nov 2026**. O export de 1 jan–26 out estava filtrado errado e não entra no painel.
 
 - **Dia:** receita, boleto, leads, encaminhamento, atendimento e conversão D+0, contra o ano anterior
-- **Canal:** atendidos, encaminhamentos e TME do mesmo dia. D+7 e acumulado do ano seguem `X`
-- **Vs meta:** meta diária de `ssbx-consumidor-prod-dig.loja_digital.metas_diarizadas`, canal RECEPTIVE, só BOT, de 3 a 16 nov 2026. Encaminhado, atendimento e conversão entram em %. Sábado e domingo levam `*`. 15 nov está zerado. O realizado continua o da capa de 9 nov
+- **Vs meta:** meta diária de `ssbx-consumidor-prod-dig.loja_digital.metas_diarizadas`, canal RECEPTIVE, só BOT, de 3 a 16 nov 2026. Encaminhado, atendimento e conversão entram em %. Cada indicador tem coluna de realizado. A capa preenche 9 nov (25,1 mil vira 25.100). Os outros dias ficam em traço. Sábado e domingo levam `*`. 15 nov está zerado
 - **Origens:** meta BOT de 9 nov por origem no canal RECEPTIVE, com encaminhado, atendimento e conversão em %. O realizado dessa quebra segue de fora. Ativações do canal ACTIVE ficam de fora: o painel olha só o receptivo, quando o lead entra em contato
-- **Agente e qualidade:** Sinfonia, recorte do agente CVM
-- **Retenção:** participação em 10 nov, em 2 nov e no período de 2 a 9 nov, da planilha histórico de retenção. A variação colorida é 10 nov contra 2 nov. O volume de sessões não veio nesse recorte
-- **Não transbordo:** cada categoria abre no clique. O insight traz o ponto de ruptura e as fricções da etapa. Em conversas, os IDs para aprofundar: cinco nas quatro primeiras categorias e dois em produto/fragrância. A participação na linha é a de 10 nov, contra 2 nov, com a faixa de 2 a 9 nov
+- **Agente:** volume, tempo e moderação do agente CVM na Sinfonia
+- **Qualidade:** avaliação da resposta e base de conhecimento ficam em traço, aguardando o time Sinfonia
+- **Retenção:** por que o lead não foi para a consultora em 9 nov (35,1% contra meta de 46,4%). Cada categoria abre no clique com o ponto de ruptura, as fricções e os IDs de conversa. A linha também mostra a participação de 10 nov, contra 2 nov, e a faixa de 2 a 9 nov

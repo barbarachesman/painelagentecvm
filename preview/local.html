@@ -518,6 +518,10 @@
     color: var(--recesso);
   }
 
+  .data-table .is-realizado {
+    background: rgba(43, 78, 232, 0.05);
+  }
+
   .data-table .num.is-up { color: var(--up); }
   .data-table .num.is-down { color: var(--down); }
 
@@ -843,13 +847,11 @@
 
       <nav class="nav" aria-label="Visões do painel">
         <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">Dia</button>
-        <button type="button" class="nav-btn" data-view="canal" aria-pressed="false">Canal LD</button>
         <button type="button" class="nav-btn" data-view="meta" aria-pressed="false">Vs meta</button>
         <button type="button" class="nav-btn" data-view="origens" aria-pressed="false">Origens</button>
         <button type="button" class="nav-btn" data-view="agente" aria-pressed="false">Agente</button>
         <button type="button" class="nav-btn" data-view="qualidade" aria-pressed="false">Qualidade</button>
         <button type="button" class="nav-btn" data-view="retencao" aria-pressed="false">Retenção</button>
-        <button type="button" class="nav-btn" data-view="eventos" aria-pressed="false">Não transbordo</button>
       </nav>
 
       <p class="aviso-box">
@@ -906,63 +908,6 @@
           </div>
         </section>
 
-        <section id="view-canal" class="view">
-          <header class="view-header">
-            <span class="badge">9 nov 2026</span>
-            <span class="scope scope-canal">Canal RECEPTIVE</span>
-            <h2>Volume, tempo e o que a capa não abre</h2>
-            <p>Mesma página do dash, no filtro certo. Acumulado do ano e D+7 não vieram neste export.</p>
-          </header>
-          <div class="panel">
-            <h3 class="section-title">Na capa</h3>
-            <div class="kpi-row">
-              <article class="kpi">
-                <span class="kpi-label">Atendidos</span>
-                <strong class="kpi-value">8 mil</strong>
-                <span class="kpi-delta is-up">+6.038 vs AA</span>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">Encaminhamentos</span>
-                <strong class="kpi-value">8,8 mil</strong>
-                <span class="kpi-delta is-up">+6.869 vs AA</span>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">TME</span>
-                <strong class="kpi-value">05:28</strong>
-                <span class="kpi-delta is-up">−00:21:49 vs AA</span>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">Receita vs AA em R$</span>
-                <strong class="kpi-value">+R$ 204,09 mil</strong>
-                <span class="kpi-delta">sobre a base do ano anterior</span>
-              </article>
-            </div>
-            <p class="def">TME é o tempo médio entre encaminhamento e atendimento.</p>
-          </div>
-          <div class="panel">
-            <h3 class="section-title">Fora deste print</h3>
-            <div class="kpi-row">
-              <article class="kpi">
-                <span class="kpi-label">Conversão D+7</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">Receita D+7</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">BM D+7</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-              <article class="kpi">
-                <span class="kpi-label">Acumulado do ano</span>
-                <strong class="kpi-value is-placeholder">X</strong>
-              </article>
-            </div>
-            <p class="def">D+7 é a conversão em loja até 7 dias, nos leads atendidos que não converteram no WhatsApp.</p>
-          </div>
-        </section>
-
         <section id="view-meta" class="view">
           <header class="view-header">
             <span class="badge">9 nov 2026</span>
@@ -1002,33 +947,45 @@
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th>Dia</th>
-                    <th class="num">Leads</th>
-                    <th class="num">% Encaminhado</th>
-                    <th class="num">% Atendimento</th>
-                    <th class="num">% Conversão</th>
-                    <th class="num">Receita</th>
+                    <th rowspan="2">Dia</th>
+                    <th class="num" colspan="2">Leads</th>
+                    <th class="num" colspan="2">% Encaminhado</th>
+                    <th class="num" colspan="2">% Atendimento</th>
+                    <th class="num" colspan="2">% Conversão</th>
+                    <th class="num" colspan="2">Receita</th>
+                  </tr>
+                  <tr>
+                    <th class="num">Meta</th>
+                    <th class="num is-realizado">Realizado</th>
+                    <th class="num">Meta</th>
+                    <th class="num is-realizado">Realizado</th>
+                    <th class="num">Meta</th>
+                    <th class="num is-realizado">Realizado</th>
+                    <th class="num">Meta</th>
+                    <th class="num is-realizado">Realizado</th>
+                    <th class="num">Meta</th>
+                    <th class="num is-realizado">Realizado</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>3 nov</td><td class="num">17.440</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 303,4 mil</td></tr>
-                  <tr><td>4 nov</td><td class="num">18.609</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 323,7 mil</td></tr>
-                  <tr><td>5 nov</td><td class="num">20.030</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 348,5 mil</td></tr>
-                  <tr><td>6 nov</td><td class="num">18.415</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 320,4 mil</td></tr>
-                  <tr><td>7 nov<sup class="fds">*</sup></td><td class="num">14.003</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 243,6 mil</td></tr>
-                  <tr><td>8 nov<sup class="fds">*</sup></td><td class="num">6.188</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 107,6 mil</td></tr>
-                  <tr><td>9 nov</td><td class="num">16.658</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 289,8 mil</td></tr>
-                  <tr><td>10 nov</td><td class="num">20.734</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 360,7 mil</td></tr>
-                  <tr><td>11 nov</td><td class="num">18.898</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 328,8 mil</td></tr>
-                  <tr><td>12 nov</td><td class="num">18.219</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 317,0 mil</td></tr>
-                  <tr><td>13 nov</td><td class="num">18.063</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 314,2 mil</td></tr>
-                  <tr><td>14 nov<sup class="fds">*</sup></td><td class="num">11.071</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 192,6 mil</td></tr>
-                  <tr><td>15 nov<sup class="fds">*</sup></td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">R$ 0</td></tr>
-                  <tr><td>16 nov</td><td class="num">18.470</td><td class="num">46,4%</td><td class="num">98,7%</td><td class="num">16,0%</td><td class="num">R$ 321,3 mil</td></tr>
+                  <tr><td>3 nov</td><td class="num">17.440</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 303,4 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>4 nov</td><td class="num">18.609</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 323,7 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>5 nov</td><td class="num">20.030</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 348,5 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>6 nov</td><td class="num">18.415</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 320,4 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>7 nov<sup class="fds">*</sup></td><td class="num">14.003</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 243,6 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>8 nov<sup class="fds">*</sup></td><td class="num">6.188</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 107,6 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>9 nov</td><td class="num">16.658</td><td class="num is-realizado">25.100</td><td class="num">46,4%</td><td class="num is-realizado">35,1%</td><td class="num">98,7%</td><td class="num is-realizado">90%</td><td class="num">16,0%</td><td class="num is-realizado">12,1%</td><td class="num">R$ 289,8 mil</td><td class="num is-realizado">R$ 216,6 mil</td></tr>
+                  <tr><td>10 nov</td><td class="num">20.734</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 360,7 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>11 nov</td><td class="num">18.898</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 328,8 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>12 nov</td><td class="num">18.219</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 317,0 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>13 nov</td><td class="num">18.063</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 314,2 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>14 nov<sup class="fds">*</sup></td><td class="num">11.071</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 192,6 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>15 nov<sup class="fds">*</sup></td><td class="num">0</td><td class="num is-realizado">—</td><td class="num">—</td><td class="num is-realizado">—</td><td class="num">—</td><td class="num is-realizado">—</td><td class="num">—</td><td class="num is-realizado">—</td><td class="num">R$ 0</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>16 nov</td><td class="num">18.470</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 321,3 mil</td><td class="num is-realizado">—</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="def"><sup class="fds">*</sup> Sábado ou domingo. 15 nov está zerado na meta. Encaminhado é sobre leads, atendimento é sobre encaminhados e conversão é sobre atendidos. O boleto médio fica em R$ 237,69.</p>
+            <p class="def"><sup class="fds">*</sup> Sábado ou domingo. 15 nov está zerado na meta. Encaminhado é sobre leads, atendimento é sobre encaminhados e conversão é sobre atendidos. O realizado diário da capa existe em 9 nov: 25,1 mil entra como 25.100. Os outros dias ficam em traço.</p>
           </div>
         </section>
 
@@ -1159,66 +1116,66 @@
             <span class="badge">Agente validador</span>
             <span class="scope scope-agente">Agente</span>
             <h2>Avaliação da resposta</h2>
-            <p>Sinfonia · base de conhecimento da campanha Dia das Crianças. As taxas do dia 9 nov não usam a mesma janela dos pontos fortes.</p>
+            <p>Sinfonia · base de conhecimento. Aguardando o time Sinfonia.</p>
           </header>
           <div class="stack">
             <div class="panel">
-              <h3 class="section-title">9 nov 2026 · 338 mensagens</h3>
+              <h3 class="section-title">Indicadores</h3>
               <div class="kpi-row">
                 <article class="kpi">
                   <span class="kpi-label">Adequação</span>
-                  <strong class="kpi-value">53,5%</strong>
+                  <strong class="kpi-value">—</strong>
                 </article>
                 <article class="kpi">
                   <span class="kpi-label">Satisfação</span>
-                  <strong class="kpi-value">51,2%</strong>
+                  <strong class="kpi-value">—</strong>
                 </article>
                 <article class="kpi">
                   <span class="kpi-label">Similaridade</span>
-                  <strong class="kpi-value">13,0%</strong>
+                  <strong class="kpi-value">—</strong>
                 </article>
                 <article class="kpi">
                   <span class="kpi-label">Alucinação</span>
-                  <strong class="kpi-value">2,1%</strong>
+                  <strong class="kpi-value">—</strong>
                 </article>
               </div>
             </div>
             <div class="split-grid">
               <div class="panel">
-                <h3 class="section-title">Pontos fortes · 27 out – 9 nov</h3>
+                <h3 class="section-title">Pontos fortes</h3>
                 <ul class="compare-list">
-                  <li class="compare-item"><span>Clareza e objetividade</span><strong>67,26%</strong></li>
-                  <li class="compare-item"><span>Triagem e encaminhamento assertivo</span><strong>45,5%</strong></li>
-                  <li class="compare-item"><span>Uso da base de conhecimento</span><strong>38,4%</strong></li>
-                  <li class="compare-item"><span>Empatia e acolhimento</span><strong>29,19%</strong></li>
-                  <li class="compare-item"><span>Agilidade e prontidão</span><strong>27,29%</strong></li>
-                  <li class="compare-item"><span>Envio de recursos de apoio</span><strong>14,89%</strong></li>
-                  <li class="compare-item"><span>Gatilhos promocionais</span><strong>9,76%</strong></li>
-                  <li class="compare-item"><span>Consultoria proativa</span><strong>7,44%</strong></li>
-                  <li class="compare-item"><span>Detalhamento e completude</span><strong>5,89%</strong></li>
-                  <li class="compare-item"><span>Personalização e contexto</span><strong>5,65%</strong></li>
-                  <li class="compare-item"><span>Argumentação de valor</span><strong>5,47%</strong></li>
-                  <li class="compare-item"><span>Tom motivacional</span><strong>4,42%</strong></li>
-                  <li class="compare-item"><span>Recursos visuais</span><strong>0,61%</strong></li>
+                  <li class="compare-item"><span>Clareza e objetividade</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Triagem e encaminhamento assertivo</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Uso da base de conhecimento</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Empatia e acolhimento</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Agilidade e prontidão</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Envio de recursos de apoio</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Gatilhos promocionais</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Consultoria proativa</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Detalhamento e completude</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Personalização e contexto</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Argumentação de valor</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Tom motivacional</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Recursos visuais</span><strong>—</strong></li>
                 </ul>
               </div>
               <div class="panel">
-                <h3 class="section-title">Pontos fracos · 27 out – 9 nov</h3>
+                <h3 class="section-title">Pontos fracos</h3>
                 <ul class="compare-list">
-                  <li class="compare-item"><span>Omissão de dados críticos</span><strong>43,06%</strong></li>
-                  <li class="compare-item"><span>Ausência de sondagem</span><strong>24,17%</strong></li>
-                  <li class="compare-item"><span>Sem ponto fraco identificado</span><strong>23,94%</strong></li>
-                  <li class="compare-item"><span>Ignora histórico ou contexto</span><strong>21,66%</strong></li>
-                  <li class="compare-item"><span>Falha na triagem ou transferência</span><strong>19,07%</strong></li>
-                  <li class="compare-item"><span>Falta de detalhe do procedimento</span><strong>17,71%</strong></li>
-                  <li class="compare-item"><span>Oferta sem personalização</span><strong>17,5%</strong></li>
-                  <li class="compare-item"><span>Resposta vaga ou genérica</span><strong>14,69%</strong></li>
-                  <li class="compare-item"><span>Falta de call to action</span><strong>10,98%</strong></li>
-                  <li class="compare-item"><span>Sem checagem de entendimento</span><strong>7,11%</strong></li>
-                  <li class="compare-item"><span>Erro técnico ou link quebrado</span><strong>4,37%</strong></li>
-                  <li class="compare-item"><span>Repetitividade (loop)</span><strong>4,18%</strong></li>
-                  <li class="compare-item"><span>Linguagem inadequada</span><strong>1,55%</strong></li>
-                  <li class="compare-item"><span>Texto longo demais</span><strong>0,4%</strong></li>
+                  <li class="compare-item"><span>Omissão de dados críticos</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Ausência de sondagem</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Sem ponto fraco identificado</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Ignora histórico ou contexto</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Falha na triagem ou transferência</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Falta de detalhe do procedimento</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Oferta sem personalização</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Resposta vaga ou genérica</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Falta de call to action</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Sem checagem de entendimento</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Erro técnico ou link quebrado</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Repetitividade (loop)</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Linguagem inadequada</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Texto longo demais</span><strong>—</strong></li>
                 </ul>
               </div>
             </div>
@@ -1226,129 +1183,37 @@
               <div class="panel">
                 <h3 class="section-title">Motivos de contato</h3>
                 <ul class="compare-list">
-                  <li class="compare-item"><span>Realizar pedido</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Problemas com pagamento</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Limite de crédito</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Solicitação de boleto</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Solicitação de catálogos</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Solicitação de promoções</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Formas de pagamento</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Cancelamento de pedidos</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Frete</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Outros</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Realizar pedido</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Problemas com pagamento</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Limite de crédito</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Solicitação de boleto</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Solicitação de catálogos</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Solicitação de promoções</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Formas de pagamento</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Cancelamento de pedidos</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Frete</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Outros</span><strong>—</strong></li>
                 </ul>
-                <p class="def">O gráfico do print não trouxe o percentual de cada motivo. Principais dúvidas da tabela vieram nulas.</p>
-              </div>
+                              </div>
               <div class="panel">
                 <h3 class="section-title">Sentimento inicial → final</h3>
                 <ul class="compare-list">
-                  <li class="compare-item"><span>Neutro</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Frustração</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Confusão</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Satisfação</span><strong class="is-placeholder">X</strong></li>
-                  <li class="compare-item"><span>Sem sentimento</span><strong class="is-placeholder">X</strong></li>
+                  <li class="compare-item"><span>Neutro</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Frustração</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Confusão</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Satisfação</span><strong>—</strong></li>
+                  <li class="compare-item"><span>Sem sentimento</span><strong>—</strong></li>
                 </ul>
-                <p class="def">O fluxo do print nomeia os sentimentos e não a participação de cada um.</p>
-              </div>
+                              </div>
             </div>
           </div>
         </section>
 
         <section id="view-retencao" class="view">
           <header class="view-header">
-            <span class="badge">Agente CVM</span>
-            <span class="scope scope-agente">Motivos de retenção</span>
-            <h2>Por que o lead não foi para a consultora</h2>
-            <p>
-              Participação em 10 nov, em 2 nov e no período de 2 a 9 nov.
-              O volume de sessões não veio nesse recorte.
-            </p>
-          </header>
-          <div class="panel">
-            <div class="retencao-head">
-              <h3 class="section-title">Histórico</h3>
-              <span class="retencao-col-label">10 nov · 2 nov · variação · 2 a 9 nov</span>
-            </div>
-            <ol class="retencao-list">
-              <li class="retencao-row">
-                <div class="retencao-copy">
-                  <strong>1. Durante a busca ou seleção</strong>
-                  <span>Sondagem sem decisão</span>
-                </div>
-                <div class="retencao-stats">
-                  <b>57,3%</b>
-                  <span>43,5% em 2 nov</span>
-                  <span class="is-down">+13,8 p.p.</span>
-                  <span>42,36% em 2–9 nov</span>
-                </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 57.3%"></span></div>
-              </li>
-              <li class="retencao-row">
-                <div class="retencao-copy">
-                  <strong>2. Escolha da loja</strong>
-                  <span>Indisponibilidade ou loja fechada</span>
-                </div>
-                <div class="retencao-stats">
-                  <b>26,8%</b>
-                  <span>14,7% em 2 nov</span>
-                  <span class="is-down">+12,1 p.p.</span>
-                  <span>10,74% em 2–9 nov</span>
-                </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 26.8%"></span></div>
-              </li>
-              <li class="retencao-row">
-                <div class="retencao-copy">
-                  <strong>3. Pós-exibição de carrossel</strong>
-                  <span>Visualização de valores</span>
-                </div>
-                <div class="retencao-stats">
-                  <b>13,5%</b>
-                  <span>27,3% em 2 nov</span>
-                  <span class="is-up">−13,8 p.p.</span>
-                  <span>40,24% em 2–9 nov</span>
-                </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 13.5%"></span></div>
-              </li>
-              <li class="retencao-row">
-                <div class="retencao-copy">
-                  <strong>4. 1ª ou 2ª interação</strong>
-                  <span>Fuga em anúncio CTWA</span>
-                </div>
-                <div class="retencao-stats">
-                  <b>2,3%</b>
-                  <span>14,3% em 2 nov</span>
-                  <span class="is-up">−12,0 p.p.</span>
-                  <span>5,46% em 2–9 nov</span>
-                </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 2.3%"></span></div>
-              </li>
-              <li class="retencao-row">
-                <div class="retencao-copy">
-                  <strong>5. Produto/fragrância não encontrada</strong>
-                  <span>Ruptura ou concorrentes</span>
-                </div>
-                <div class="retencao-stats">
-                  <b>0,1%</b>
-                  <span>0,2% em 2 nov</span>
-                  <span class="is-up">−0,1 p.p.</span>
-                  <span>1,20% em 2–9 nov</span>
-                </div>
-                <div class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.1%"></span></div>
-              </li>
-            </ol>
-            <p class="def">
-              A barra é a participação de 10 nov. A variação é contra 2 nov. O último número é a participação de 2 a 9 nov.
-              Queda significa menos gente parando naquele ponto.
-              O deep dive abre ao clicar na categoria, em Não transbordo.
-            </p>
-          </div>
-        </section>
-
-        <section id="view-eventos" class="view">
-          <header class="view-header">
             <span class="badge">9 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE · BOT</span>
-            <h2>Não transbordo</h2>
+            <h2>Por que o lead não foi para a consultora</h2>
             <p>
               Encaminhamento do dia em 35,1%, contra meta de 46,4% (−11,3%).
               O volume encaminhado ficou em 8,8 mil, acima da meta de 7.731 (+1.069).
@@ -1537,9 +1402,9 @@
               </article>
             </div>
             <p class="def">
-              A participação é a de 10 nov, contra 2 nov. Ao lado, a faixa de 2 a 9 nov.
-              O insight é o ponto de ruptura, com as fricções da etapa.
-              Em conversas, os IDs para aprofundar. Produto/fragrância chegou com dois.
+              A barra é a participação de 10 nov. A variação é contra 2 nov. O último número é a participação de 2 a 9 nov.
+              Queda significa menos gente parando naquele ponto.
+              O clique abre o ponto de ruptura, as fricções e os IDs de 9 nov. Produto/fragrância chegou com dois.
             </p>
           </div>
         </section>
