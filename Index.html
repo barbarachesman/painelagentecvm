@@ -29,10 +29,10 @@
 
       <nav class="nav" aria-label="Visões do painel">
         <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">Dia</button>
-        <button type="button" class="nav-btn" data-view="meta" aria-pressed="false">Vs meta</button>
-        <button type="button" class="nav-btn" data-view="origens" aria-pressed="false">Origens</button>
-        <button type="button" class="nav-btn" data-view="agente" aria-pressed="false">Agente</button>
-        <button type="button" class="nav-btn" data-view="qualidade" aria-pressed="false">Qualidade</button>
+        <button type="button" class="nav-btn is-review" data-view="meta" aria-pressed="false">Vs meta</button>
+        <button type="button" class="nav-btn is-review" data-view="origens" aria-pressed="false">Origens</button>
+        <button type="button" class="nav-btn is-review" data-view="agente" aria-pressed="false">Agente</button>
+        <button type="button" class="nav-btn is-review" data-view="qualidade" aria-pressed="false">Qualidade</button>
         <button type="button" class="nav-btn" data-view="retencao" aria-pressed="false">Retenção</button>
       </nav>
 
@@ -90,7 +90,8 @@
           </div>
         </section>
 
-        <section id="view-meta" class="view" hidden>
+        <section id="view-meta" class="view is-review" hidden>
+          <p class="review-note">Em avaliação com o time Sinfonia.</p>
           <header class="view-header">
             <span class="badge">9 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE</span>
@@ -171,7 +172,8 @@
           </div>
         </section>
 
-        <section id="view-origens" class="view" hidden>
+        <section id="view-origens" class="view is-review" hidden>
+          <p class="review-note">Em avaliação com o time Sinfonia.</p>
           <header class="view-header">
             <span class="badge">9 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE · BOT</span>
@@ -208,7 +210,8 @@
           </div>
         </section>
 
-        <section id="view-agente" class="view" hidden>
+        <section id="view-agente" class="view is-review" hidden>
+          <p class="review-note">Em avaliação com o time Sinfonia.</p>
           <header class="view-header">
             <span class="badge">Sinfonia · agente Consumidor CVM</span>
             <span class="scope scope-agente">Agente</span>
@@ -293,7 +296,8 @@
           </div>
         </section>
 
-        <section id="view-qualidade" class="view" hidden>
+        <section id="view-qualidade" class="view is-review" hidden>
+          <p class="review-note">Em avaliação com o time Sinfonia.</p>
           <header class="view-header">
             <span class="badge">Agente validador</span>
             <span class="scope scope-agente">Agente</span>

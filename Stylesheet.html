@@ -169,6 +169,47 @@
     color: #fff;
   }
 
+  .nav-btn.is-review {
+    color: #9aa3ad;
+  }
+
+  .nav-btn.is-review:hover {
+    background: rgba(79, 93, 107, 0.08);
+    color: #6d7884;
+  }
+
+  .nav-btn.is-review.is-active {
+    background: #c5ccd4;
+    color: #fff;
+  }
+
+  .review-note {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 0.85rem;
+    padding: 0.7rem 0.95rem;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    color: var(--texto);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  .view.is-review {
+    position: relative;
+  }
+
+  .view.is-review::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: rgba(79, 93, 107, 0.28);
+    pointer-events: none;
+    border-radius: var(--radius-lg);
+  }
+
   .view {
     scroll-margin-top: 0.75rem;
   }
