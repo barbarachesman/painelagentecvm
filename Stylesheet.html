@@ -774,13 +774,14 @@
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0.65rem;
-    align-items: center;
+    align-items: start;
     background: var(--branco);
     border-radius: 12px;
     padding: 0.65rem 0.75rem;
   }
 
   .dive-talks li > span {
+    margin-top: 0.15rem;
     width: 1.45rem;
     height: 1.45rem;
     border-radius: 999px;
@@ -801,6 +802,12 @@
     font-size: 0.82rem;
     color: var(--navy);
     word-break: break-all;
+  }
+
+  .dive-talks .talk-note {
+    margin: 0.28rem 0 0;
+    color: var(--texto);
+    font-size: 0.88rem;
   }
 
   .data-table td.is-placeholder {
