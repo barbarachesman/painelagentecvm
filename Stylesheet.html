@@ -689,9 +689,26 @@
   }
 
   .dive-insight {
-    margin: 0.3rem 0 0.9rem;
+    margin: 0.3rem 0 0.85rem;
     color: var(--navy);
     font-size: 1rem;
+  }
+
+  .dive-frictions {
+    list-style: none;
+    margin: 0.4rem 0 0.95rem;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .dive-frictions li {
+    color: var(--texto);
+    font-size: 0.92rem;
+  }
+
+  .dive-frictions strong {
+    color: var(--navy);
   }
 
   .dive-insight.is-placeholder,
@@ -732,6 +749,13 @@
 
   .dive-talks p {
     margin: 0;
+  }
+
+  .dive-talks code {
+    font-family: ui-monospace, 'IBM Plex Sans', monospace;
+    font-size: 0.82rem;
+    color: var(--navy);
+    word-break: break-all;
   }
 
   .data-table td.is-placeholder {
