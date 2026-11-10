@@ -47,6 +47,21 @@
       });
     }
 
+    function bindDives() {
+      document.querySelectorAll('.dive-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const body = document.getElementById(btn.getAttribute('aria-controls'));
+          const item = btn.closest('.dive-item');
+          const action = btn.querySelector('.dive-action');
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          if (item) item.classList.toggle('is-open', !open);
+          if (body) body.hidden = open;
+          if (action) action.textContent = open ? 'Abrir' : 'Fechar';
+        });
+      });
+    }
+
     function bindNav() {
       document.querySelectorAll('.nav-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -63,6 +78,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       setGreetingDate();
       bindNav();
+      bindDives();
     });
   })();
 </script>

@@ -597,6 +597,15 @@
     font-weight: 700;
   }
 
+  .retencao-stats .is-up,
+  .retencao-stats .is-down {
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .retencao-stats .is-up { color: var(--up); }
+  .retencao-stats .is-down { color: var(--down); }
+
   .retencao-bar {
     grid-column: 1 / -1;
     height: 8px;
@@ -612,6 +621,124 @@
     min-width: 4px;
   }
 
+  .dive-list {
+    display: grid;
+    gap: 0.15rem;
+    margin-top: 0.35rem;
+  }
+
+  .dive-item + .dive-item {
+    border-top: 1px solid var(--borda);
+    margin-top: 0.35rem;
+    padding-top: 0.55rem;
+  }
+
+  .dive-toggle {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) auto auto;
+    gap: 0.35rem 0.85rem;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 0.45rem 0.35rem;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dive-toggle:hover {
+    background: rgba(43, 78, 232, 0.05);
+  }
+
+  .dive-toggle:hover .retencao-copy strong {
+    color: var(--azul);
+  }
+
+  .dive-toggle:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+  }
+
+  .dive-action {
+    align-self: center;
+    color: var(--azul);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .dive-body {
+    margin: 0.35rem 0.35rem 0.55rem;
+    background: var(--creme);
+    border-radius: 16px;
+    padding: 0.9rem 1rem 1rem;
+  }
+
+  .dive-kicker {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--azul);
+  }
+
+  .dive-insight {
+    margin: 0.3rem 0 0.9rem;
+    color: var(--navy);
+    font-size: 1rem;
+  }
+
+  .dive-insight.is-placeholder,
+  .dive-talks .is-placeholder {
+    color: var(--recesso);
+    font-weight: 700;
+  }
+
+  .dive-talks {
+    list-style: none;
+    margin: 0.45rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .dive-talks li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    align-items: center;
+    background: var(--branco);
+    border-radius: 12px;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .dive-talks li > span {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 999px;
+    background: var(--pill);
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+
+  .dive-talks p {
+    margin: 0;
+  }
+
+  .data-table td.is-placeholder {
+    color: var(--recesso);
+    font-weight: 700;
+  }
+
   .retencao-bar .tom-1 { background: var(--evento); }
   .retencao-bar .tom-2 { background: var(--pessego); }
   .retencao-bar .tom-3 { background: var(--azul); }
@@ -621,6 +748,15 @@
   @media (max-width: 860px) {
     .split-grid {
       grid-template-columns: 1fr;
+    }
+
+    .dive-toggle {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .dive-toggle .retencao-stats {
+      grid-column: 1 / -1;
+      justify-content: flex-start;
     }
 
     .nav {
