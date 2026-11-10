@@ -26,17 +26,53 @@
     ];
 
     function formatGreetingDate(date) {
-      const weekday = WEEKDAYS[date.getDay()];
-      const day = date.getDate();
-      const month = MONTHS[date.getMonth()];
-      const year = date.getFullYear();
+      const weekday = WEEKDAYS[date.getUTCDay()];
+      const day = date.getUTCDate();
+      const month = MONTHS[date.getUTCMonth()];
+      const year = date.getUTCFullYear();
       return weekday + ', ' + day + ' de ' + month + ' de ' + year;
     }
 
-    function setGreetingDate() {
-      const el = document.getElementById('greeting-date');
-      if (!el) return;
-      el.textContent = formatGreetingDate(new Date());
+    const MONTHS_SHORT = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    const COVER_ISO = '2026-11-09';
+
+    function yesterdayInSaoPaulo(now) {
+      const fmt = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      });
+      const parts = fmt.format(now).split('-').map(Number);
+      const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] - 1, 15, 0, 0));
+      return { iso: fmt.format(date), date: date };
+    }
+
+    function formatShortDate(yday) {
+      const parts = yday.iso.split('-').map(Number);
+      return parts[2] + ' ' + MONTHS_SHORT[parts[1] - 1] + ' ' + parts[0];
+    }
+
+    function applyDiaDate(now) {
+      const yday = yesterdayInSaoPaulo(now);
+      const short = formatShortDate(yday);
+      const greeting = document.getElementById('greeting-date');
+      if (greeting) greeting.textContent = 'ontem · ' + formatGreetingDate(yday.date);
+      const badge = document.getElementById('dia-badge');
+      if (badge) badge.textContent = short;
+      const banner = document.getElementById('dia-banner');
+      if (banner) banner.textContent = short;
+
+      const hasCover = yday.iso === COVER_ISO;
+      document.querySelectorAll('#view-dia .js-dia-value').forEach(function (el) {
+        if (!el.hasAttribute('data-original')) el.setAttribute('data-original', el.textContent);
+        el.textContent = hasCover ? el.getAttribute('data-original') : '—';
+      });
+      document.querySelectorAll('#view-dia .js-dia-delta').forEach(function (el) {
+        el.hidden = !hasCover;
+      });
+      const note = document.getElementById('dia-sem-capa');
+      if (note) note.hidden = hasCover;
     }
 
     function setActiveNav(viewId) {
@@ -83,7 +119,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      setGreetingDate();
+      applyDiaDate(new Date());
       showViews(HOME_VIEWS);
       setActiveNav('dia');
       bindNav();
