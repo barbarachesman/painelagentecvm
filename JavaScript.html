@@ -34,9 +34,9 @@
     }
 
     const MONTHS_SHORT = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-    const COVER_ISO = '2026-11-09';
+    const COVER_ISO = '2026-11-10';
 
-    function yesterdayInSaoPaulo(now) {
+    function refDayInSaoPaulo(now) {
       const fmt = new Intl.DateTimeFormat('en-CA', {
         timeZone: 'America/Sao_Paulo',
         year: 'numeric',
@@ -44,7 +44,7 @@
         day: '2-digit',
       });
       const parts = fmt.format(now).split('-').map(Number);
-      const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] - 1, 15, 0, 0));
+      const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] - 2, 15, 0, 0));
       return { iso: fmt.format(date), date: date };
     }
 
@@ -54,10 +54,10 @@
     }
 
     function applyDiaDate(now) {
-      const yday = yesterdayInSaoPaulo(now);
+      const yday = refDayInSaoPaulo(now);
       const short = formatShortDate(yday);
       const greeting = document.getElementById('greeting-date');
-      if (greeting) greeting.textContent = 'ontem · ' + formatGreetingDate(yday.date);
+      if (greeting) greeting.textContent = 'D-2 · ' + formatGreetingDate(yday.date);
       const badge = document.getElementById('dia-badge');
       if (badge) badge.textContent = short;
 
@@ -96,6 +96,19 @@
       });
     }
 
+    function bindTalks() {
+      document.querySelectorAll('.talk-open').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const thread = document.getElementById(btn.getAttribute('aria-controls'));
+          const label = btn.querySelector('.talk-open-label');
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          if (thread) thread.hidden = open;
+          if (label) label.textContent = open ? 'Abrir conversa' : 'Fechar';
+        });
+      });
+    }
+
     const HOME_VIEWS = ['dia', 'retencao'];
 
     function showViews(ids) {
@@ -122,6 +135,7 @@
       setActiveNav('dia');
       bindNav();
       bindDives();
+      bindTalks();
     });
   })();
 </script>

@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <style>
+<style>
   /* Tokens e shell alinhados ao Gestor360 */
   :root {
     --azul: #2b4ee8;
@@ -504,6 +505,11 @@
     font-size: 0.84rem;
   }
 
+  .def a {
+    color: var(--azul);
+    font-weight: 700;
+  }
+
   .table-scroll {
     overflow-x: auto;
   }
@@ -812,6 +818,62 @@
     font-size: 0.88rem;
   }
 
+  .talk-open {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.7rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .talk-open:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+  }
+
+  .talk-open-label {
+    color: var(--azul);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .talk-thread {
+    list-style: none;
+    margin: 0.55rem 0 0;
+    padding: 0.7rem 0.75rem;
+    background: var(--creme);
+    border-radius: 10px;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .talk-thread[hidden] {
+    display: none;
+  }
+
+  .dive-talks .talk-thread li {
+    display: block;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    color: var(--texto);
+    font-size: 0.86rem;
+  }
+
+  .talk-thread b {
+    color: var(--navy);
+  }
+
   .data-table td.is-placeholder {
     color: var(--recesso);
     font-weight: 700;
@@ -867,6 +929,7 @@
   }
 </style>
 
+</style>
   </head>
   <body>
     <header class="site-header">
@@ -884,7 +947,7 @@
       <h1 class="greeting">Funil e <em>performance</em> do Agente CVM</h1>
 
       <nav class="nav" aria-label="Visões do painel">
-        <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">Ontem</button>
+        <button type="button" class="nav-btn is-active" data-view="dia" aria-pressed="true">D-2</button>
         <button type="button" class="nav-btn is-review" data-view="meta" aria-pressed="false">Vs meta</button>
         <button type="button" class="nav-btn is-review" data-view="origens" aria-pressed="false">Origens</button>
         <button type="button" class="nav-btn is-review" data-view="agente" aria-pressed="false">Agente</button>
@@ -895,54 +958,55 @@
       <main class="main section-gap">
         <section id="view-dia" class="view">
           <header class="view-header">
-            <span class="badge" id="dia-badge">9 nov 2026</span>
+            <span class="badge" id="dia-badge">10 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE</span>
             <h2>Receita e funil do dia</h2>
-            <p>O dia é sempre ontem. O vs AA vem do Dashboard Oficial LD. O vs meta é calculado: realizado do Dashboard Oficial LD contra a meta BOT do dia.</p>
+            <p>O funil olha D-2, porque a capa de ontem ainda não fecha. A capa publicada é 10 nov: os números entram enquanto D-2 for esse dia. O vs AA vem do Dashboard Oficial LD. O vs meta é calculado: realizado desse dashboard contra a meta BOT do dia.</p>
           </header>
           <div class="panel">
-            <p class="def" id="dia-sem-capa" hidden>A capa de ontem ainda não entrou. A última publicada é 9 nov 2026.</p>
+            <p class="def" id="dia-sem-capa" hidden>A capa de D-2 ainda não entrou. A última publicada é 10 nov 2026.</p>
             <div class="kpi-row">
               <article class="kpi kpi-main">
                 <span class="kpi-label">Receita transacionada</span>
-                <strong class="kpi-value js-dia-value">R$ 216,6 mil</strong>
-                <span class="kpi-delta is-up js-dia-delta">+1.504,6% vs AA</span>
-                <span class="kpi-delta is-down js-dia-delta">−25,3% vs meta</span>
+                <strong class="kpi-value js-dia-value">R$ 217,0 mil</strong>
+                <span class="kpi-delta is-up js-dia-delta">+54,2% vs AA</span>
+                <span class="kpi-delta is-down js-dia-delta">−39,8% vs meta</span>
               </article>
               <article class="kpi">
                 <span class="kpi-label">Boleto médio</span>
-                <strong class="kpi-value js-dia-value">R$ 225</strong>
-                <span class="kpi-delta is-up js-dia-delta">+R$ 7,66 vs AA</span>
-                <span class="kpi-delta is-down js-dia-delta">−R$ 12,69 vs meta</span>
+                <strong class="kpi-value js-dia-value">R$ 233</strong>
+                <span class="kpi-delta is-up js-dia-delta">+R$ 56,73 vs AA</span>
+                <span class="kpi-delta is-down js-dia-delta">−R$ 4,69 vs meta</span>
               </article>
               <article class="kpi">
                 <span class="kpi-label">Leads</span>
-                <strong class="kpi-value js-dia-value">25,1 mil</strong>
-                <span class="kpi-delta is-up js-dia-delta">+19,2 mil vs AA</span>
-                <span class="kpi-delta is-up js-dia-delta">+8,4 mil vs meta</span>
+                <strong class="kpi-value js-dia-value">30,6 mil</strong>
+                <span class="kpi-delta is-up js-dia-delta">+15,1 mil vs AA</span>
+                <span class="kpi-delta is-up js-dia-delta">+9,9 mil vs meta</span>
               </article>
               <article class="kpi">
                 <span class="kpi-label">Encaminhamento</span>
-                <strong class="kpi-value js-dia-value">35,1%</strong>
-                <span class="kpi-delta is-up js-dia-delta">+2,3% vs AA</span>
-                <span class="kpi-delta is-down js-dia-delta">−11,3% vs meta</span>
+                <strong class="kpi-value js-dia-value">54,1%</strong>
+                <span class="kpi-delta is-down js-dia-delta">−3,0% vs AA</span>
+                <span class="kpi-delta is-up js-dia-delta">+7,7% vs meta</span>
               </article>
               <article class="kpi">
                 <span class="kpi-label">Atendimento</span>
-                <strong class="kpi-value js-dia-value">90%</strong>
-                <span class="kpi-delta is-down js-dia-delta">−6,8% vs AA</span>
-                <span class="kpi-delta is-down js-dia-delta">−8,7% vs meta</span>
+                <strong class="kpi-value js-dia-value">51%</strong>
+                <span class="kpi-delta is-down js-dia-delta">−48,6% vs AA</span>
+                <span class="kpi-delta is-down js-dia-delta">−47,7% vs meta</span>
               </article>
               <article class="kpi">
                 <span class="kpi-label">Conversão D+0</span>
-                <strong class="kpi-value js-dia-value">12,1%</strong>
-                <span class="kpi-delta is-up js-dia-delta">+8,8% vs AA</span>
-                <span class="kpi-delta is-down js-dia-delta">−3,9% vs meta</span>
+                <strong class="kpi-value js-dia-value">11,1%</strong>
+                <span class="kpi-delta is-up js-dia-delta">+2,0% vs AA</span>
+                <span class="kpi-delta is-down js-dia-delta">−4,9% vs meta</span>
               </article>
             </div>
             <p class="def">
               <strong>D+0:</strong> conversão dentro do próprio WhatsApp.
-              Volumes do Dashboard Oficial LD entram como 25.100 leads, 8.800 encaminhamentos e 8.000 atendidos.
+              Volumes do Dashboard Oficial LD entram como 30.600 leads, 16.600 encaminhamentos e 8.000 atendidos.
+              No card de conversão, a mesma receita aparece com −R$ 42,96 mil vs AA.
             </p>
           </div>
         </section>
@@ -950,10 +1014,10 @@
         <section id="view-meta" class="view is-review" hidden>
           <p class="review-note">Em avaliação com o time Sinfonia.</p>
           <header class="view-header">
-            <span class="badge">9 nov 2026</span>
+            <span class="badge">10 nov 2026</span>
             <span class="scope scope-canal">Canal RECEPTIVE</span>
             <h2>Realizado contra meta</h2>
-            <p>Meta diária só de BOT. O realizado é o do Dashboard Oficial LD de ontem. O vs meta é a conta desse realizado contra a meta. 9 nov é segunda-feira.</p>
+            <p>Meta diária só de BOT. O realizado é o do Dashboard Oficial LD de D-2. O vs meta é a conta desse realizado contra a meta. 10 nov é terça-feira.</p>
           </header>
           <div class="panel">
             <div class="table-scroll">
@@ -968,18 +1032,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Leads</td><td class="num">25,1 mil</td><td class="num">16,7 mil</td><td class="num is-up">+8,4 mil</td><td class="num">+19,2 mil</td></tr>
-                  <tr><td>Encaminhamento</td><td class="num">8,8 mil</td><td class="num">7.731</td><td class="num is-up">+1.069</td><td class="num">+6.869</td></tr>
-                  <tr><td>% Encaminhamento</td><td class="num">35,1%</td><td class="num">46,4%</td><td class="num is-down">−11,3%</td><td class="num">+2,3%</td></tr>
-                  <tr><td>Atendimento</td><td class="num">8 mil</td><td class="num">7.634</td><td class="num is-up">+366</td><td class="num">+6.038</td></tr>
-                  <tr><td>% Atendimento</td><td class="num">90%</td><td class="num">98,7%</td><td class="num is-down">−8,7%</td><td class="num">−6,8%</td></tr>
-                  <tr><td>% Conversão D+0</td><td class="num">12,1%</td><td class="num">16,0%</td><td class="num is-down">−3,9%</td><td class="num">+8,8%</td></tr>
-                  <tr><td>Receita</td><td class="num">R$ 216,6 mil</td><td class="num">R$ 289,8 mil</td><td class="num is-down">−25,3%</td><td class="num">+1.504,6%</td></tr>
-                  <tr><td>Boleto médio</td><td class="num">R$ 225</td><td class="num">R$ 237,69</td><td class="num is-down">−R$ 12,69</td><td class="num">+R$ 7,66</td></tr>
+                  <tr><td>Leads</td><td class="num">30,6 mil</td><td class="num">20,7 mil</td><td class="num is-up">+9,9 mil</td><td class="num">+15,1 mil</td></tr>
+                  <tr><td>Encaminhamento</td><td class="num">16,6 mil</td><td class="num">9.623</td><td class="num is-up">+6.977</td><td class="num">+7.724</td></tr>
+                  <tr><td>% Encaminhamento</td><td class="num">54,1%</td><td class="num">46,4%</td><td class="num is-up">+7,7%</td><td class="num">−3,0%</td></tr>
+                  <tr><td>Atendimento</td><td class="num">8 mil</td><td class="num">9.501</td><td class="num is-down">−1.501</td><td class="num">−383</td></tr>
+                  <tr><td>% Atendimento</td><td class="num">51%</td><td class="num">98,7%</td><td class="num is-down">−47,7%</td><td class="num">−48,6%</td></tr>
+                  <tr><td>% Conversão D+0</td><td class="num">11,1%</td><td class="num">16,0%</td><td class="num is-down">−4,9%</td><td class="num">+2,0%</td></tr>
+                  <tr><td>Receita</td><td class="num">R$ 217,0 mil</td><td class="num">R$ 360,7 mil</td><td class="num is-down">−39,8%</td><td class="num">+54,2%</td></tr>
+                  <tr><td>Boleto médio</td><td class="num">R$ 233</td><td class="num">R$ 237,69</td><td class="num is-down">−R$ 4,69</td><td class="num">+R$ 56,73</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="def">Vs meta calculado. 25,1 mil, 8,8 mil e 8 mil entram como 25.100, 8.800 e 8.000. As taxas usam o percentual do Dashboard Oficial LD. A meta é a soma BOT do receptivo em 9 nov: 16.658 leads, 7.731 encaminhados, 7.634 atendidos e R$ 289.793 de receita.</p>
+            <p class="def">Vs meta calculado. 30,6 mil, 16,6 mil e 8 mil entram como 30.600, 16.600 e 8.000. As taxas usam o percentual do Dashboard Oficial LD. A meta é a soma BOT do receptivo em 10 nov: 20.734 leads, 9.623 encaminhados, 9.501 atendidos e R$ 360.698 de receita.</p>
           </div>
           <div class="panel">
             <h3 class="section-title">Meta diária BOT, 3 a 16 nov</h3>
@@ -1014,8 +1078,8 @@
                   <tr><td>6 nov</td><td class="num">18.415</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 320,4 mil</td><td class="num is-realizado">—</td></tr>
                   <tr><td>7 nov<sup class="fds">*</sup></td><td class="num">14.003</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 243,6 mil</td><td class="num is-realizado">—</td></tr>
                   <tr><td>8 nov<sup class="fds">*</sup></td><td class="num">6.188</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 107,6 mil</td><td class="num is-realizado">—</td></tr>
-                  <tr><td>9 nov</td><td class="num">16.658</td><td class="num is-realizado">25.100</td><td class="num">46,4%</td><td class="num is-realizado">35,1%</td><td class="num">98,7%</td><td class="num is-realizado">90%</td><td class="num">16,0%</td><td class="num is-realizado">12,1%</td><td class="num">R$ 289,8 mil</td><td class="num is-realizado">R$ 216,6 mil</td></tr>
-                  <tr><td>10 nov</td><td class="num">20.734</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 360,7 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>9 nov</td><td class="num">16.658</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 289,8 mil</td><td class="num is-realizado">—</td></tr>
+                  <tr><td>10 nov</td><td class="num">20.734</td><td class="num is-realizado">30.600</td><td class="num">46,4%</td><td class="num is-realizado">54,1%</td><td class="num">98,7%</td><td class="num is-realizado">51%</td><td class="num">16,0%</td><td class="num is-realizado">11,1%</td><td class="num">R$ 360,7 mil</td><td class="num is-realizado">R$ 217,0 mil</td></tr>
                   <tr><td>11 nov</td><td class="num">18.898</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 328,8 mil</td><td class="num is-realizado">—</td></tr>
                   <tr><td>12 nov</td><td class="num">18.219</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 317,0 mil</td><td class="num is-realizado">—</td></tr>
                   <tr><td>13 nov</td><td class="num">18.063</td><td class="num is-realizado">—</td><td class="num">46,4%</td><td class="num is-realizado">—</td><td class="num">98,7%</td><td class="num is-realizado">—</td><td class="num">16,0%</td><td class="num is-realizado">—</td><td class="num">R$ 314,2 mil</td><td class="num is-realizado">—</td></tr>
@@ -1025,7 +1089,7 @@
                 </tbody>
               </table>
             </div>
-            <p class="def"><sup class="fds">*</sup> Sábado ou domingo. 15 nov está zerado na meta. Encaminhado é sobre leads, atendimento é sobre encaminhados e conversão é sobre atendidos. O realizado diário do Dashboard Oficial LD existe em 9 nov: 25,1 mil entra como 25.100. Os outros dias ficam em traço.</p>
+            <p class="def"><sup class="fds">*</sup> Sábado ou domingo. 15 nov está zerado na meta. Encaminhado é sobre leads, atendimento é sobre encaminhados e conversão é sobre atendidos. O realizado diário do Dashboard Oficial LD existe em 10 nov: 30,6 mil entra como 30.600. Os outros dias ficam em traço.</p>
           </div>
         </section>
 
@@ -1259,7 +1323,8 @@
             <h2>Por que o lead não foi para a consultora</h2>
             <p>
               Diagnóstico de 10 nov. São 13.176 sessões nos cinco temas.
-              O carrossel concentra 8.115. Clique na linha para abrir a fricção e os exemplos de sessão.
+              O carrossel concentra 8.115. Clique na linha para abrir a fricção.
+              O id abre o recorte da conversa, a partir da planilha de amostras.
             </p>
           </header>
           <div class="panel">
@@ -1293,25 +1358,143 @@
                   </ol>
                   <p class="dive-kicker">Carrossel geral</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>00127e82-4bf5-43e4-8838-d696b90d7b15</code><p class="talk-note">Viu o card e não adicionou à sacola.</p></div></li>
-                    <li><span>2</span><div><code>001a6d1a-b8cb-408c-8213-835ee78debb0</code><p class="talk-note">Viu o card e não adicionou à sacola.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00127e82">
+                        <code>00127e82-4bf5-43e4-8838-d696b90d7b15</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu o Malbec, escolheu o de 100ml e parou antes de finalizar. A consultora não foi oferecida.</p>
+                      <ol class="talk-thread" id="talk-00127e82" hidden>
+                        <li><b>Pessoa.</b> Malbek original.</li>
+                        <li><b>Agente.</b> Mostrou o Malbec Desodorante Colônia 100ml.</li>
+                        <li><b>Pessoa.</b> Escolher produto.</li>
+                        <li><b>Agente.</b> Confirmou o 100ml e perguntou se via mais produtos ou finalizava a compra.</li>
+                        <li><b>Depois.</b> Veio a oferta de 15% e a pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-001a6d1a">
+                        <code>001a6d1a-b8cb-408c-8213-835ee78debb0</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">O kit do anúncio não bateu com o preço. Pediu 70% e o agente achou um combo a R$ 495,55. Quando a consultora foi oferecida, a pessoa disse depois.</p>
+                      <ol class="talk-thread" id="talk-001a6d1a" hidden>
+                        <li><b>Pessoa.</b> Perguntou quanto era o kit do anúncio.</li>
+                        <li><b>Agente.</b> Mostrou kits de R$ 59,90 a R$ 309,90 e não identificou o kit da imagem.</li>
+                        <li><b>Pessoa.</b> Pediu o kit de Laomini, perfume e cremes, com 70% de desconto.</li>
+                        <li><b>Agente.</b> Achou o Combo Presente Lily Lumière por R$ 495,55 e disse que os 70% não apareciam. Ofereceu a consultora.</li>
+                        <li><b>Pessoa.</b> Depois.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Perfumaria</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>03d7ccfe-efc8-458a-8591-6d48358605dc</code><p class="talk-note">Ticket de fragrância premium na faixa de R$ 130 a R$ 230.</p></div></li>
-                    <li><span>2</span><div><code>164cc95f-a162-403e-87a8-3edd7d831eee</code><p class="talk-note">Ticket de fragrância premium na faixa de R$ 130 a R$ 230.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-03d7ccfe">
+                        <code>03d7ccfe-efc8-458a-8591-6d48358605dc</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Queria falar com a loja. Não havia consultora na região. Seguiu para perfumaria e saiu sem escolher.</p>
+                      <ol class="talk-thread" id="talk-03d7ccfe" hidden>
+                        <li><b>Pessoa.</b> Vim do grupo e quero falar com a loja.</li>
+                        <li><b>Agente.</b> Pediu o CEP ou a rua e a cidade.</li>
+                        <li><b>Pessoa.</b> Compartilhou a localização.</li>
+                        <li><b>Agente.</b> Não havia loja nem consultora na região.</li>
+                        <li><b>Pessoa.</b> Foi para o app ou o site, depois buscou perfumaria e parou na pergunta de fragrância doce ou fresca.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-164cc95f">
+                        <code>164cc95f-a162-403e-87a8-3edd7d831eee</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Perguntou o valor do Malbec e como pagar. O clique de sacola entrou como Novo Liz. Na pesquisa, disse que não gostou, e a conversa para na nova oferta de consultora.</p>
+                      <ol class="talk-thread" id="talk-164cc95f" hidden>
+                        <li><b>Pessoa.</b> Perguntou o valor e como pagar, e escreveu Malbec.</li>
+                        <li><b>Agente.</b> Explicou Pix, cartão e boleto, mostrou Malbec e ofereceu a consultora.</li>
+                        <li><b>Pessoa.</b> O clique de sacola entrou como Novo Liz Desodorante Colônia 100ml.</li>
+                        <li><b>Agente.</b> Perguntou se via mais produtos ou finalizava.</li>
+                        <li><b>Pessoa.</b> Na pesquisa, marcou que não gostou.</li>
+                        <li><b>Agente.</b> Ofereceu a consultora de novo. A planilha para aí.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Kits e presentes</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>031a2f8a-f9c4-43a0-98a3-94c204cc6d5a</code><p class="talk-note">Card de kit sem conversão.</p></div></li>
-                    <li><span>2</span><div><code>292d4e76-7b93-466f-9a33-42415276811c</code><p class="talk-note">Card de kit sem conversão.</p></div></li>
-                    <li><span>3</span><div><code>2dad721f-1b5f-4f08-aa1d-d706d38fef53</code><p class="talk-note">Card de kit sem conversão.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-031a2f8a">
+                        <code>031a2f8a-f9c4-43a0-98a3-94c204cc6d5a</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Veio pelo presente de aniversário do nível ouro. Viu produtos, a consultora foi oferecida e a pessoa não respondeu.</p>
+                      <ol class="talk-thread" id="talk-031a2f8a" hidden>
+                        <li><b>Pessoa.</b> Sou nível ouro no Beautybox e vim saber do presente de aniversário.</li>
+                        <li><b>Agente.</b> Explicou o resgate na loja ou no aplicativo, mostrou produtos e ofereceu a consultora.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-292d4e76">
+                        <code>292d4e76-7b93-466f-9a33-42415276811c</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu presente, abriu o Insensatez e parou na pergunta se o presente era mais marcante ou mais fresquinho. A consultora não foi chamada.</p>
+                      <ol class="talk-thread" id="talk-292d4e76" hidden>
+                        <li><b>Pessoa.</b> Perguntou se podia por grupos e depois pediu presente.</li>
+                        <li><b>Agente.</b> Abriu o Insensatez. No presente, listou Malbec a partir de R$ 169,90, Liz a partir de R$ 179,90 e Coffee Woman Addictive a partir de R$ 229,90.</li>
+                        <li><b>Agente.</b> Perguntou se o presente era mais marcante ou mais fresquinho.</li>
+                        <li><b>Depois.</b> Pesquisa, sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>3</span><div>
+                      <code>2dad721f-1b5f-4f08-aa1d-d706d38fef53</code>
+                      <p class="talk-note">Card de kit sem conversão. Essa sessão não está na planilha de amostras.</p>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Cuidados, corpo e banho</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>5c70ce90-349a-4b76-9976-59c6759d0323</code><p class="talk-note">Parou depois de Nativa SPA ou Cuide-se Bem.</p></div></li>
-                    <li><span>2</span><div><code>a2476848-c8b1-4986-96de-991096762a77</code><p class="talk-note">Parou depois de Nativa SPA ou Cuide-se Bem.</p></div></li>
-                    <li><span>3</span><div><code>f507c26b-e442-495f-8ef2-30557b03c824</code><p class="talk-note">Parou depois de Nativa SPA ou Cuide-se Bem.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-5c70ce90">
+                        <code>5c70ce90-349a-4b76-9976-59c6759d0323</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Perguntou a promoção do batom nude, depois óleo de ameixa e body splash. Viu o refil Nativa SPA Ameixa, disse que o body splash era outro, e não seguiu quando a consultora foi oferecida.</p>
+                      <ol class="talk-thread" id="talk-5c70ce90" hidden>
+                        <li><b>Pessoa.</b> Perguntou se o batom cremoso nude estava na promoção leve 2 pague 1.</li>
+                        <li><b>Agente.</b> Mostrou batons e ofereceu a consultora.</li>
+                        <li><b>Pessoa.</b> Pediu óleo de ameixa e body splash. Abriu o refil Nativa SPA Ameixa e disse que o body splash era outro.</li>
+                        <li><b>Agente.</b> Ofereceu a consultora de novo.</li>
+                        <li><b>Depois.</b> Pesquisa, sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-a2476848">
+                        <code>a2476848-c8b1-4986-96de-991096762a77</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Escolheu o antitranspirante Cuide-se Bem Rosa e Algodão e parou na pergunta de finalizar. A consultora tinha sido oferecida antes, e a pessoa seguiu no produto.</p>
+                      <ol class="talk-thread" id="talk-a2476848" hidden>
+                        <li><b>Pessoa.</b> Comprar no WhatsApp. Depois, cuidados corporais, Rosa e algodão, creme desodorante.</li>
+                        <li><b>Agente.</b> Mostrou o Antitranspirante em Creme Cuide-se Bem Rosa e Algodão 80g e ofereceu a consultora.</li>
+                        <li><b>Pessoa.</b> Escolher produto.</li>
+                        <li><b>Agente.</b> Confirmou o item e perguntou se via mais produtos ou finalizava.</li>
+                        <li><b>Depois.</b> Pesquisa, sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>3</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-f507c26b">
+                        <code>f507c26b-e442-495f-8ef2-30557b03c824</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Perguntou o valor, recebeu o combo Lily a R$ 473,80, pediu promoção e foi para creme de corpo. A consultora foi oferecida e não houve resposta.</p>
+                      <ol class="talk-thread" id="talk-f507c26b" hidden>
+                        <li><b>Pessoa.</b> Qual valor.</li>
+                        <li><b>Agente.</b> Combo Lily L’Or Elixir, de R$ 539,80 por R$ 473,80.</li>
+                        <li><b>Pessoa.</b> Quero aproveitar promoções. Depois, creme de corpo.</li>
+                        <li><b>Agente.</b> Mostrou cremes e ofereceu a consultora.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                 </div>
               </article>
@@ -1338,13 +1521,57 @@
                   </ol>
                   <p class="dive-kicker">Categoria geral</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>0001b947-96e4-4a73-b79c-6c555e6372cc</code><p class="talk-note">Escolheu a categoria e não avançou.</p></div></li>
-                    <li><span>2</span><div><code>00186fc1-c8bb-4a54-8eee-5d6514559f24</code><p class="talk-note">Escolheu a categoria e não avançou.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0001b947">
+                        <code>0001b947-96e4-4a73-b79c-6c555e6372cc</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">A mensagem chegou quebrada. O agente pediu qual produto consultar e a pessoa não respondeu. A consultora não foi oferecida.</p>
+                      <ol class="talk-thread" id="talk-0001b947" hidden>
+                        <li><b>Pessoa.</b> A mensagem chegou quebrada, com o próprio nome e a cidade.</li>
+                        <li><b>Agente.</b> Pediu o nome ou a categoria do produto para consultar o preço.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00186fc1">
+                        <code>00186fc1-c8bb-4a54-8eee-5d6514559f24</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Perguntou os descontos da Beauty Week, recebeu o 15% da primeira compra e não escolheu categoria. A consultora não foi oferecida.</p>
+                      <ol class="talk-thread" id="talk-00186fc1" hidden>
+                        <li><b>Pessoa.</b> Quais são os descontos da Beauty Week?</li>
+                        <li><b>Agente.</b> Falou do 15% na primeira compra pelo WhatsApp e pediu a categoria.</li>
+                        <li><b>Depois.</b> Oferta de 15% de novo e a pesquisa. Sem escolha de categoria.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Oferta de ajuda</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>0a5d1336-f882-477e-8ad4-2d6297e1cf99</code><p class="talk-note">O agente ofereceu ajuda e a pessoa saiu sem avançar.</p></div></li>
-                    <li><span>2</span><div><code>19adf35a-42c2-431f-b1d0-ff65aefb2c5f</code><p class="talk-note">O agente ofereceu ajuda e a pessoa saiu sem avançar.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0a5d1336">
+                        <code>0a5d1336-f882-477e-8ad4-2d6297e1cf99</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu o presente de aniversário, recebeu o passo a passo do aplicativo e não respondeu. A consultora não entrou.</p>
+                      <ol class="talk-thread" id="talk-0a5d1336" hidden>
+                        <li><b>Pessoa.</b> Quero meu presente de aniversário.</li>
+                        <li><b>Agente.</b> Passou o caminho no aplicativo, na área de fidelidade, e perguntou como seguir.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-19adf35a">
+                        <code>19adf35a-42c2-431f-b1d0-ff65aefb2c5f</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Veio pelo presente de aniversário do nível ouro. O agente explicou o resgate e ofereceu ajuda para achar produtos. A pessoa não avançou.</p>
+                      <ol class="talk-thread" id="talk-19adf35a" hidden>
+                        <li><b>Pessoa.</b> Sou nível ouro no Beautybox e vim saber do presente de aniversário.</li>
+                        <li><b>Agente.</b> Explicou o resgate na loja, sem compra, ou no aplicativo, com compra a partir de R$ 29,90. Ofereceu ajuda para achar produtos.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta. A consultora não foi chamada.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                 </div>
               </article>
@@ -1370,7 +1597,18 @@
                   </ol>
                   <p class="dive-kicker">Exemplo</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>0135e6db-65e4-46ae-8010-19cf751fac67</code><p class="talk-note">Saiu depois da boas-vindas, sem responder ao primeiro menu.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0135e6db">
+                        <code>0135e6db-65e4-46ae-8010-19cf751fac67</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Escreveu comprar no WhatsApp, recebeu a boas-vindas e a oferta de 15%, e não respondeu ao menu.</p>
+                      <ol class="talk-thread" id="talk-0135e6db" hidden>
+                        <li><b>Pessoa.</b> Comprar no WhatsApp.</li>
+                        <li><b>Agente.</b> Boas-vindas e, em seguida, a oferta de 15%.</li>
+                        <li><b>Depois.</b> Pesquisa, sem resposta ao menu. A consultora não foi oferecida.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                 </div>
               </article>
@@ -1398,18 +1636,95 @@
                   </ol>
                   <p class="dive-kicker">CEP</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>01855197-a1e3-40b2-b165-be806a5ba193</code><p class="talk-note">Parou na solicitação de CEP.</p></div></li>
-                    <li><span>2</span><div><code>00a1b206-01c5-46ab-aabe-97ffe5a1a0f2</code><p class="talk-note">Parou na solicitação de CEP.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-01855197">
+                        <code>01855197-a1e3-40b2-b165-be806a5ba193</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Escolheu o combo Lily L’Or Elixir, pediu para finalizar e parou quando o fluxo pediu o CEP para chegar na consultora.</p>
+                      <ol class="talk-thread" id="talk-01855197" hidden>
+                        <li><b>Pessoa.</b> Quero conhecer a nova fragrância de Lily L’Or Elixir. Adicionou o combo à sacola e pediu para finalizar.</li>
+                        <li><b>Agente.</b> Recapitulou o combo, de R$ 539,80 por R$ 473,80, e pediu o CEP ou a rua e a cidade para falar com uma consultora.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. O CEP não veio.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00a1b206">
+                        <code>00a1b206-01c5-46ab-aabe-97ffe5a1a0f2</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">A conversa ficou em mensagens sem pedido, até a pessoa pedir a consultora. Parou na solicitação de CEP.</p>
+                      <ol class="talk-thread" id="talk-00a1b206" hidden>
+                        <li><b>Pessoa.</b> Várias mensagens sem pedido, entre elas “io” e textos soltos.</li>
+                        <li><b>Agente.</b> Repetiu o menu de produtos, perfumaria ou loja.</li>
+                        <li><b>Pessoa.</b> Quero continuar. Depois, buscar produto e falar com consultora.</li>
+                        <li><b>Agente.</b> Pediu o CEP ou a rua e a cidade.</li>
+                        <li><b>Depois.</b> A planilha para na solicitação. O CEP não veio.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Loja indisponível</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>00468cf3-4171-4c67-9ffd-483fe8b4a80b</code><p class="talk-note">Loja indisponível.</p></div></li>
-                    <li><span>2</span><div><code>013c3e00-4d41-4a92-bcd9-1c225cb5e627</code><p class="talk-note">Loja indisponível.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00468cf3">
+                        <code>00468cf3-4171-4c67-9ffd-483fe8b4a80b</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu a consultora. A única loja do local estava indisponível, e a pessoa foi para o app ou o site.</p>
+                      <ol class="talk-thread" id="talk-00468cf3" hidden>
+                        <li><b>Pessoa.</b> Queria falar com uma consultora de loja.</li>
+                        <li><b>Agente.</b> Pediu o CEP ou a localização.</li>
+                        <li><b>Pessoa.</b> Compartilhou a localização.</li>
+                        <li><b>Agente.</b> A única loja do local estava indisponível. O WhatsApp da loja atende de segunda a sexta, 8h às 17h, e sábado, 8h às 12h.</li>
+                        <li><b>Pessoa.</b> Ir para app ou site.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-013c3e00">
+                        <code>013c3e00-4d41-4a92-bcd9-1c225cb5e627</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu a consultora duas vezes. Nas duas, a loja do local estava indisponível.</p>
+                      <ol class="talk-thread" id="talk-013c3e00" hidden>
+                        <li><b>Pessoa.</b> Queria falar com uma consultora.</li>
+                        <li><b>Agente.</b> Pediu a localização. A loja encontrada estava indisponível, com atendimento de terça a sábado, 10h às 18h.</li>
+                        <li><b>Pessoa.</b> Pediu para mudar o endereço e compartilhou a localização de novo.</li>
+                        <li><b>Agente.</b> A outra loja também estava indisponível, de segunda a sábado, 10h às 18h.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem escolha.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Sem seleção</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>03043d42-3c12-487a-b8aa-1097b7338f29</code><p class="talk-note">Não selecionou a loja.</p></div></li>
-                    <li><span>2</span><div><code>02f7fe55-322f-435b-b3a7-3553944eedf2</code><p class="talk-note">Não selecionou a loja.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-03043d42">
+                        <code>03043d42-3c12-487a-b8aa-1097b7338f29</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Queria outra loja, mais perto, e não escolheu as que apareceram. A mídia que mandou não foi lida. Encerrou dizendo que não gostou.</p>
+                      <ol class="talk-thread" id="talk-03043d42" hidden>
+                        <li><b>Pessoa.</b> Pediu a consultora e mandou uma mídia.</li>
+                        <li><b>Agente.</b> Disse que não conseguia ver a mídia e pediu o CEP.</li>
+                        <li><b>Pessoa.</b> Compartilhou a localização e recusou as lojas sugeridas. Queria outra, mais perto.</li>
+                        <li><b>Agente.</b> As lojas ficavam em outra cidade. Pediu de novo o CEP.</li>
+                        <li><b>Pessoa.</b> Deixa pra lá. Disse que o agente não falava e só mandava para outra loja.</li>
+                        <li><b>Depois.</b> Na pesquisa, marcou que não gostou. A consultora foi oferecida de novo no fim.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-02f7fe55">
+                        <code>02f7fe55-322f-435b-b3a7-3553944eedf2</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu a consultora, as lojas apareceram, e a pergunta virou o brinde de aniversário. Agradeceu e saiu sem escolher.</p>
+                      <ol class="talk-thread" id="talk-02f7fe55" hidden>
+                        <li><b>Pessoa.</b> Pediu a consultora e compartilhou a localização.</li>
+                        <li><b>Agente.</b> Encontrou lojas e pediu para escolher.</li>
+                        <li><b>Pessoa.</b> Mudou a pergunta: como pegar o brinde de aniversário.</li>
+                        <li><b>Agente.</b> Explicou o resgate do nível ouro na loja ou no aplicativo.</li>
+                        <li><b>Pessoa.</b> Não. Muito obrigado.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                 </div>
               </article>
@@ -1436,25 +1751,60 @@
                   </ol>
                   <p class="dive-kicker">Carrossel sem o item</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>0b993714-af16-4b23-9070-8c3d1d4df0fa</code><p class="talk-note">O carrossel trouxe alternativas, sem o item buscado.</p></div></li>
-                    <li><span>2</span><div><code>0b9a2f98-3b46-4057-92d6-fca1b2366694</code><p class="talk-note">O carrossel trouxe alternativas, sem o item buscado.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0b993714">
+                        <code>0b993714-af16-4b23-9070-8c3d1d4df0fa</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu o hidratante de cereja a R$ 22,90. O agente achou opções a partir de R$ 56,90. A pessoa não respondeu e não foi para a consultora.</p>
+                      <ol class="talk-thread" id="talk-0b993714" hidden>
+                        <li><b>Agente.</b> Uma conversa anterior com a loja tinha sido encerrada, com link de catálogo.</li>
+                        <li><b>Pessoa.</b> Você tem esse hidratante de cereja de R$ 22,90?</li>
+                        <li><b>Agente.</b> Encontrou hidratantes de cereja a partir de R$ 56,90, e não a opção de R$ 22,90. Ofereceu procurar mais perto desse valor.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0b9a2f98">
+                        <code>0b9a2f98-3b46-4057-92d6-fca1b2366694</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu body splash The Blend masculino. O agente não achou o body splash, ofereceu Eau de Parfum e a consultora, e a pessoa não seguiu.</p>
+                      <ol class="talk-thread" id="talk-0b9a2f98" hidden>
+                        <li><b>Pessoa.</b> Você tem o body splash The Blend? Depois, body splash masculino.</li>
+                        <li><b>Agente.</b> Não encontrou body splash The Blend. Achou Eau de Parfum da linha e ofereceu a consultora duas vezes.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                   <p class="dive-kicker">Texto livre</p>
                   <ol class="dive-talks">
-                    <li><span>1</span><div><code>04f7f965-68fe-4d64-894d-2f1d2640e36c</code><p class="talk-note">O texto livre não foi encontrado pelo agente.</p></div></li>
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-04f7f965">
+                        <code>04f7f965-68fe-4d64-894d-2f1d2640e36c</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Mandou o código 817505. O agente não encontrou o produto e pediu a categoria. A pessoa não respondeu.</p>
+                      <ol class="talk-thread" id="talk-04f7f965" hidden>
+                        <li><b>Pessoa.</b> 817505.</li>
+                        <li><b>Agente.</b> Não encontrou produto com esse código e pediu a categoria.</li>
+                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta. A consultora não foi oferecida.</li>
+                      </ol>
+                    </div></li>
                   </ol>
                 </div>
               </article>
             </div>
             <p class="def">
               A barra é a participação dentro das 13.176 sessões de 10 nov. Na loja, 221 param no CEP, 57 encontram loja indisponível e 136 não selecionam.
+              O id abre o recorte da <a href="https://docs.google.com/spreadsheets/d/1U9zb5G9YVtbb1AmP0DYoi18oYdC9tk9YrE0oW-w9GRA/edit?gid=0#gid=0" target="_blank" rel="noopener">planilha de amostras</a>, sem telefone, CEP ou endereço. Uma sessão de kit não está na planilha.
             </p>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · diagnóstico de retenção 10 nov</span>
+        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · diagnóstico de retenção 10 nov · amostras de conversas</span>
         <span><code>X</code> = métrica ausente nesses recortes</span>
       </footer>
     </div>
@@ -1495,9 +1845,9 @@
     }
 
     const MONTHS_SHORT = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-    const COVER_ISO = '2026-11-09';
+    const COVER_ISO = '2026-11-10';
 
-    function yesterdayInSaoPaulo(now) {
+    function refDayInSaoPaulo(now) {
       const fmt = new Intl.DateTimeFormat('en-CA', {
         timeZone: 'America/Sao_Paulo',
         year: 'numeric',
@@ -1505,7 +1855,7 @@
         day: '2-digit',
       });
       const parts = fmt.format(now).split('-').map(Number);
-      const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] - 1, 15, 0, 0));
+      const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] - 2, 15, 0, 0));
       return { iso: fmt.format(date), date: date };
     }
 
@@ -1515,10 +1865,10 @@
     }
 
     function applyDiaDate(now) {
-      const yday = yesterdayInSaoPaulo(now);
+      const yday = refDayInSaoPaulo(now);
       const short = formatShortDate(yday);
       const greeting = document.getElementById('greeting-date');
-      if (greeting) greeting.textContent = 'ontem · ' + formatGreetingDate(yday.date);
+      if (greeting) greeting.textContent = 'D-2 · ' + formatGreetingDate(yday.date);
       const badge = document.getElementById('dia-badge');
       if (badge) badge.textContent = short;
 
@@ -1557,6 +1907,19 @@
       });
     }
 
+    function bindTalks() {
+      document.querySelectorAll('.talk-open').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const thread = document.getElementById(btn.getAttribute('aria-controls'));
+          const label = btn.querySelector('.talk-open-label');
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          if (thread) thread.hidden = open;
+          if (label) label.textContent = open ? 'Abrir conversa' : 'Fechar';
+        });
+      });
+    }
+
     const HOME_VIEWS = ['dia', 'retencao'];
 
     function showViews(ids) {
@@ -1583,6 +1946,7 @@
       setActiveNav('dia');
       bindNav();
       bindDives();
+      bindTalks();
     });
   })();
 </script>
