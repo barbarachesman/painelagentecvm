@@ -492,6 +492,11 @@
     font-size: 0.84rem;
   }
 
+  .def a {
+    color: var(--azul);
+    font-weight: 700;
+  }
+
   .table-scroll {
     overflow-x: auto;
   }
@@ -798,6 +803,62 @@
     margin: 0.28rem 0 0;
     color: var(--texto);
     font-size: 0.88rem;
+  }
+
+  .talk-open {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.7rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .talk-open:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+  }
+
+  .talk-open-label {
+    color: var(--azul);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .talk-thread {
+    list-style: none;
+    margin: 0.55rem 0 0;
+    padding: 0.7rem 0.75rem;
+    background: var(--creme);
+    border-radius: 10px;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .talk-thread[hidden] {
+    display: none;
+  }
+
+  .dive-talks .talk-thread li {
+    display: block;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    color: var(--texto);
+    font-size: 0.86rem;
+  }
+
+  .talk-thread b {
+    color: var(--navy);
   }
 
   .data-table td.is-placeholder {
