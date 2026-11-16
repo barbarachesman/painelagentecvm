@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <style>
-<style>
   /* Tokens e shell alinhados ao Gestor360 */
   :root {
     --azul: #2b4ee8;
@@ -644,6 +643,17 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .retencao-share {
+    color: var(--azul);
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .retencao-day + .retencao-day {
+    margin-top: 1rem;
+  }
+
   .retencao-stats .is-placeholder {
     color: var(--recesso);
     font-size: 0.78rem;
@@ -730,6 +740,13 @@
     background: var(--creme);
     border-radius: 16px;
     padding: 0.9rem 1rem 1rem;
+  }
+
+  .dive-share {
+    margin: 0 0 0.7rem;
+    color: var(--azul);
+    font-size: 0.95rem;
+    font-weight: 700;
   }
 
   .dive-kicker {
@@ -929,7 +946,6 @@
   }
 </style>
 
-</style>
   </head>
   <body>
     <header class="site-header">
@@ -1322,473 +1338,321 @@
             <span class="scope scope-agente">Motivos de retenção</span>
             <h2>Por que o lead não foi para a consultora</h2>
             <p>
-              Diagnóstico de 10 nov. São 13.176 sessões nos cinco temas.
-              O carrossel concentra 8.115. Clique na linha para abrir a fricção.
-              O id abre o recorte da conversa, a partir da planilha de amostras.
+              12 nov, quinta, tem 42.178 sessões. A 1ª ou 2ª interação concentra 72,62%.
+              13 nov, sexta, tem 12.481 sessões. O envio do CEP passa à frente, com 35,04%.
+              Clique na linha para abrir a fricção. No dia 12, o id abre o recorte da planilha.
             </p>
           </header>
-          <div class="panel">
+          <div class="panel retencao-day">
             <div class="retencao-head">
-              <h3 class="section-title">Por categoria</h3>
-              <span class="retencao-col-label">10 nov · sessões · participação</span>
+              <h3 class="section-title">12 nov · quinta</h3>
+              <span class="retencao-col-label">42.178 sessões · participação</span>
             </div>
             <div class="dive-list">
               <article class="dive-item">
-                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="dive-carrossel">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d12-interacao">
                   <span class="retencao-copy">
-                    <strong>1. Pós-exibição de carrossel</strong>
-                    <span>Viu o card e não adicionou à sacola</span>
+                    <strong>1. 1ª ou 2ª interação</strong>
+                    <span>Saiu na abertura do diálogo</span>
                   </span>
                   <span class="retencao-stats">
-                    <b>8.115</b>
-                    <span>61,6%</span>
+                    <b>30.628</b>
+                    <span class="retencao-share">72,62%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
-                  <span class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 61.6%"></span></span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 72.62%"></span></span>
                 </button>
-                <div class="dive-body" id="dive-carrossel" hidden>
+                <div class="dive-body" id="d12-interacao" hidden>
+                  <p class="dive-share">72,62% das 42.178 sessões.</p>
                   <p class="dive-kicker">Insight</p>
-                  <p class="dive-insight">A pessoa vê o card com preço e não adiciona à sacola. O atrito muda conforme o tipo de card.</p>
+                  <p class="dive-insight">A pessoa rejeita cedo, na abertura do diálogo.</p>
                   <p class="dive-kicker">Fricções</p>
                   <ol class="dive-frictions">
-                    <li><strong>Carrossel geral.</strong> Cards de produto e preço, sem clique para adicionar à sacola.</li>
-                    <li><strong>Perfumaria.</strong> Sensibilidade ao ticket exibido, na faixa de R$ 130 a R$ 230.</li>
-                    <li><strong>Kits e presentes.</strong> Cards de kit sem conversão.</li>
-                    <li><strong>Cuidados, corpo e banho.</strong> Desistência depois de linhas como Nativa SPA e Cuide-se Bem.</li>
+                    <li><strong>Desistência passiva.</strong> 91% desta categoria. Manda só um oi, ou entra por campanha, e não responde às opções de boas-vindas.</li>
+                    <li><strong>Menu inicial genérico.</strong> 7%. Pouco apelo imediato, ou atrito nos botões de autosserviço.</li>
+                    <li><strong>Expectativa diferente.</strong> 2%. Buscava suporte de pós-venda, como rastreio, e encontrou um fluxo de venda.</li>
                   </ol>
-                  <p class="dive-kicker">Carrossel geral</p>
+                  <p class="dive-kicker">Exemplos</p>
                   <ol class="dive-talks">
                     <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00127e82">
-                        <code>00127e82-4bf5-43e4-8838-d696b90d7b15</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-4a6608de">
+                        <code>4a6608de-ddd8-4b75-8c64-d1dd1c0e6594</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Pediu o Malbec, escolheu o de 100ml e parou antes de finalizar. A consultora não foi oferecida.</p>
-                      <ol class="talk-thread" id="talk-00127e82" hidden>
-                        <li><b>Pessoa.</b> Malbek original.</li>
-                        <li><b>Agente.</b> Mostrou o Malbec Desodorante Colônia 100ml.</li>
-                        <li><b>Pessoa.</b> Escolher produto.</li>
-                        <li><b>Agente.</b> Confirmou o 100ml e perguntou se via mais produtos ou finalizava a compra.</li>
-                        <li><b>Depois.</b> Veio a oferta de 15% e a pesquisa. Sem resposta.</li>
+                      <p class="talk-note">Entrou por campanha, mandou mídia que o agente não leu e não respondeu ao menu.</p>
+                      <ol class="talk-thread" id="talk-4a6608de" hidden>
+                        <li><b>Agente.</b> Abriu a campanha e, várias vezes, disse que recebeu uma mídia e não conseguiu ver.</li>
+                        <li><b>Agente.</b> Avisou que passaria para uma consultora e pediu para reenviar o arquivo.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem resposta ao menu.</li>
                       </ol>
                     </div></li>
                     <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-001a6d1a">
-                        <code>001a6d1a-b8cb-408c-8213-835ee78debb0</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-465244f0">
+                        <code>465244f0-d81a-4c1a-b0cc-d39b013327be</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">O kit do anúncio não bateu com o preço. Pediu 70% e o agente achou um combo a R$ 495,55. Quando a consultora foi oferecida, a pessoa disse depois.</p>
-                      <ol class="talk-thread" id="talk-001a6d1a" hidden>
-                        <li><b>Pessoa.</b> Perguntou quanto era o kit do anúncio.</li>
-                        <li><b>Agente.</b> Mostrou kits de R$ 59,90 a R$ 309,90 e não identificou o kit da imagem.</li>
-                        <li><b>Pessoa.</b> Pediu o kit de Laomini, perfume e cremes, com 70% de desconto.</li>
-                        <li><b>Agente.</b> Achou o Combo Presente Lily Lumière por R$ 495,55 e disse que os 70% não apareciam. Ofereceu a consultora.</li>
-                        <li><b>Pessoa.</b> Depois.</li>
+                      <p class="talk-note">Perguntou qual valor tinha. Recebeu a referência de um serviço e o caminho do aplicativo, e não seguiu no menu.</p>
+                      <ol class="talk-thread" id="talk-465244f0" hidden>
+                        <li><b>Pessoa.</b> Queria saber qual valor tinha.</li>
+                        <li><b>Agente.</b> Falou de um serviço de maquiagem, cerca de R$ 139,90, e do saldo no aplicativo.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem nova resposta.</li>
                       </ol>
                     </div></li>
                   </ol>
-                  <p class="dive-kicker">Perfumaria</p>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d12-loja">
+                  <span class="retencao-copy">
+                    <strong>2. Escolha da loja</strong>
+                    <span>CEP, lista de lojas ou loja indisponível</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>5.895</b>
+                    <span class="retencao-share">13,97%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 13.97%"></span></span>
+                </button>
+                <div class="dive-body" id="d12-loja" hidden>
+                  <p class="dive-share">13,97% das 42.178 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa para no caminho até a consultora da loja. O atrito muda conforme o CEP chega ou não.</p>
+                  <p class="dive-kicker">Fricções</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Pediu o CEP e a pessoa não enviou.</strong> 61,4% desta categoria.</li>
+                    <li><strong>Enviou o CEP e não escolheu a loja.</strong> 12,3%.</li>
+                    <li><strong>Loja fechada, indisponível ou sem cobertura.</strong> 26,3%.</li>
+                  </ol>
+                  <p class="dive-kicker">CEP sem envio</p>
                   <ol class="dive-talks">
                     <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-03d7ccfe">
-                        <code>03d7ccfe-efc8-458a-8591-6d48358605dc</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-c840cb2a">
+                        <code>c840cb2a-de83-4348-bd61-80a269d10d36</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Queria falar com a loja. Não havia consultora na região. Seguiu para perfumaria e saiu sem escolher.</p>
-                      <ol class="talk-thread" id="talk-03d7ccfe" hidden>
-                        <li><b>Pessoa.</b> Vim do grupo e quero falar com a loja.</li>
+                      <p class="talk-note">Pediu a consultora. O agente pediu o CEP e a pessoa não enviou.</p>
+                      <ol class="talk-thread" id="talk-c840cb2a" hidden>
+                        <li><b>Pessoa.</b> Boa tarde. Falar com consultora.</li>
                         <li><b>Agente.</b> Pediu o CEP ou a rua e a cidade.</li>
-                        <li><b>Pessoa.</b> Compartilhou a localização.</li>
-                        <li><b>Agente.</b> Não havia loja nem consultora na região.</li>
-                        <li><b>Pessoa.</b> Foi para o app ou o site, depois buscou perfumaria e parou na pergunta de fragrância doce ou fresca.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. O CEP não veio.</li>
                       </ol>
                     </div></li>
                     <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-164cc95f">
-                        <code>164cc95f-a162-403e-87a8-3edd7d831eee</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-e6c9c375">
+                        <code>e6c9c375-7f9f-4fca-bc6e-f52c9d21e422</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Perguntou o valor do Malbec e como pagar. O clique de sacola entrou como Novo Liz. Na pesquisa, disse que não gostou, e a conversa para na nova oferta de consultora.</p>
-                      <ol class="talk-thread" id="talk-164cc95f" hidden>
-                        <li><b>Pessoa.</b> Perguntou o valor e como pagar, e escreveu Malbec.</li>
-                        <li><b>Agente.</b> Explicou Pix, cartão e boleto, mostrou Malbec e ofereceu a consultora.</li>
-                        <li><b>Pessoa.</b> O clique de sacola entrou como Novo Liz Desodorante Colônia 100ml.</li>
-                        <li><b>Agente.</b> Perguntou se via mais produtos ou finalizava.</li>
-                        <li><b>Pessoa.</b> Na pesquisa, marcou que não gostou.</li>
-                        <li><b>Agente.</b> Ofereceu a consultora de novo. A planilha para aí.</li>
-                      </ol>
-                    </div></li>
-                  </ol>
-                  <p class="dive-kicker">Kits e presentes</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-031a2f8a">
-                        <code>031a2f8a-f9c4-43a0-98a3-94c204cc6d5a</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Veio pelo presente de aniversário do nível ouro. Viu produtos, a consultora foi oferecida e a pessoa não respondeu.</p>
-                      <ol class="talk-thread" id="talk-031a2f8a" hidden>
-                        <li><b>Pessoa.</b> Sou nível ouro no Beautybox e vim saber do presente de aniversário.</li>
-                        <li><b>Agente.</b> Explicou o resgate na loja ou no aplicativo, mostrou produtos e ofereceu a consultora.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-292d4e76">
-                        <code>292d4e76-7b93-466f-9a33-42415276811c</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Pediu presente, abriu o Insensatez e parou na pergunta se o presente era mais marcante ou mais fresquinho. A consultora não foi chamada.</p>
-                      <ol class="talk-thread" id="talk-292d4e76" hidden>
-                        <li><b>Pessoa.</b> Perguntou se podia por grupos e depois pediu presente.</li>
-                        <li><b>Agente.</b> Abriu o Insensatez. No presente, listou Malbec a partir de R$ 169,90, Liz a partir de R$ 179,90 e Coffee Woman Addictive a partir de R$ 229,90.</li>
-                        <li><b>Agente.</b> Perguntou se o presente era mais marcante ou mais fresquinho.</li>
-                        <li><b>Depois.</b> Pesquisa, sem resposta.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>3</span><div>
-                      <code>2dad721f-1b5f-4f08-aa1d-d706d38fef53</code>
-                      <p class="talk-note">Card de kit sem conversão. Essa sessão não está na planilha de amostras.</p>
-                    </div></li>
-                  </ol>
-                  <p class="dive-kicker">Cuidados, corpo e banho</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-5c70ce90">
-                        <code>5c70ce90-349a-4b76-9976-59c6759d0323</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Perguntou a promoção do batom nude, depois óleo de ameixa e body splash. Viu o refil Nativa SPA Ameixa, disse que o body splash era outro, e não seguiu quando a consultora foi oferecida.</p>
-                      <ol class="talk-thread" id="talk-5c70ce90" hidden>
-                        <li><b>Pessoa.</b> Perguntou se o batom cremoso nude estava na promoção leve 2 pague 1.</li>
-                        <li><b>Agente.</b> Mostrou batons e ofereceu a consultora.</li>
-                        <li><b>Pessoa.</b> Pediu óleo de ameixa e body splash. Abriu o refil Nativa SPA Ameixa e disse que o body splash era outro.</li>
-                        <li><b>Agente.</b> Ofereceu a consultora de novo.</li>
-                        <li><b>Depois.</b> Pesquisa, sem resposta.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-a2476848">
-                        <code>a2476848-c8b1-4986-96de-991096762a77</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Escolheu o antitranspirante Cuide-se Bem Rosa e Algodão e parou na pergunta de finalizar. A consultora tinha sido oferecida antes, e a pessoa seguiu no produto.</p>
-                      <ol class="talk-thread" id="talk-a2476848" hidden>
-                        <li><b>Pessoa.</b> Comprar no WhatsApp. Depois, cuidados corporais, Rosa e algodão, creme desodorante.</li>
-                        <li><b>Agente.</b> Mostrou o Antitranspirante em Creme Cuide-se Bem Rosa e Algodão 80g e ofereceu a consultora.</li>
-                        <li><b>Pessoa.</b> Escolher produto.</li>
-                        <li><b>Agente.</b> Confirmou o item e perguntou se via mais produtos ou finalizava.</li>
-                        <li><b>Depois.</b> Pesquisa, sem resposta.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>3</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-f507c26b">
-                        <code>f507c26b-e442-495f-8ef2-30557b03c824</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Perguntou o valor, recebeu o combo Lily a R$ 473,80, pediu promoção e foi para creme de corpo. A consultora foi oferecida e não houve resposta.</p>
-                      <ol class="talk-thread" id="talk-f507c26b" hidden>
-                        <li><b>Pessoa.</b> Qual valor.</li>
-                        <li><b>Agente.</b> Combo Lily L’Or Elixir, de R$ 539,80 por R$ 473,80.</li>
-                        <li><b>Pessoa.</b> Quero aproveitar promoções. Depois, creme de corpo.</li>
-                        <li><b>Agente.</b> Mostrou cremes e ofereceu a consultora.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
-                      </ol>
-                    </div></li>
-                  </ol>
-                </div>
-              </article>
-              <article class="dive-item">
-                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="dive-busca">
-                  <span class="retencao-copy">
-                    <strong>2. Durante a busca ou seleção</strong>
-                    <span>Parou na categoria ou na ajuda</span>
-                  </span>
-                  <span class="retencao-stats">
-                    <b>4.095</b>
-                    <span>31,1%</span>
-                  </span>
-                  <span class="dive-action">Abrir</span>
-                  <span class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 31.1%"></span></span>
-                </button>
-                <div class="dive-body" id="dive-busca" hidden>
-                  <p class="dive-kicker">Insight</p>
-                  <p class="dive-insight">A pessoa escolhe uma categoria ou recebe a oferta de ajuda para achar o produto e sai sem avançar.</p>
-                  <p class="dive-kicker">Fricções</p>
-                  <ol class="dive-frictions">
-                    <li><strong>Categoria geral.</strong> Inatividade depois da escolha da categoria.</li>
-                    <li><strong>Oferta de ajuda.</strong> O agente oferece ajuda para encontrar o produto e a pessoa sai sem avançar.</li>
-                  </ol>
-                  <p class="dive-kicker">Categoria geral</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0001b947">
-                        <code>0001b947-96e4-4a73-b79c-6c555e6372cc</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">A mensagem chegou quebrada. O agente pediu qual produto consultar e a pessoa não respondeu. A consultora não foi oferecida.</p>
-                      <ol class="talk-thread" id="talk-0001b947" hidden>
-                        <li><b>Pessoa.</b> A mensagem chegou quebrada, com o próprio nome e a cidade.</li>
-                        <li><b>Agente.</b> Pediu o nome ou a categoria do produto para consultar o preço.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00186fc1">
-                        <code>00186fc1-c8bb-4a54-8eee-5d6514559f24</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Perguntou os descontos da Beauty Week, recebeu o 15% da primeira compra e não escolheu categoria. A consultora não foi oferecida.</p>
-                      <ol class="talk-thread" id="talk-00186fc1" hidden>
-                        <li><b>Pessoa.</b> Quais são os descontos da Beauty Week?</li>
-                        <li><b>Agente.</b> Falou do 15% na primeira compra pelo WhatsApp e pediu a categoria.</li>
-                        <li><b>Depois.</b> Oferta de 15% de novo e a pesquisa. Sem escolha de categoria.</li>
-                      </ol>
-                    </div></li>
-                  </ol>
-                  <p class="dive-kicker">Oferta de ajuda</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0a5d1336">
-                        <code>0a5d1336-f882-477e-8ad4-2d6297e1cf99</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Pediu o presente de aniversário, recebeu o passo a passo do aplicativo e não respondeu. A consultora não entrou.</p>
-                      <ol class="talk-thread" id="talk-0a5d1336" hidden>
-                        <li><b>Pessoa.</b> Quero meu presente de aniversário.</li>
-                        <li><b>Agente.</b> Passou o caminho no aplicativo, na área de fidelidade, e perguntou como seguir.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-19adf35a">
-                        <code>19adf35a-42c2-431f-b1d0-ff65aefb2c5f</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Veio pelo presente de aniversário do nível ouro. O agente explicou o resgate e ofereceu ajuda para achar produtos. A pessoa não avançou.</p>
-                      <ol class="talk-thread" id="talk-19adf35a" hidden>
-                        <li><b>Pessoa.</b> Sou nível ouro no Beautybox e vim saber do presente de aniversário.</li>
-                        <li><b>Agente.</b> Explicou o resgate na loja, sem compra, ou no aplicativo, com compra a partir de R$ 29,90. Ofereceu ajuda para achar produtos.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta. A consultora não foi chamada.</li>
-                      </ol>
-                    </div></li>
-                  </ol>
-                </div>
-              </article>
-              <article class="dive-item">
-                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="dive-interacao">
-                  <span class="retencao-copy">
-                    <strong>3. 1ª ou 2ª interação</strong>
-                    <span>Sem resposta ao primeiro menu</span>
-                  </span>
-                  <span class="retencao-stats">
-                    <b>458</b>
-                    <span>3,5%</span>
-                  </span>
-                  <span class="dive-action">Abrir</span>
-                  <span class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 3.5%"></span></span>
-                </button>
-                <div class="dive-body" id="dive-interacao" hidden>
-                  <p class="dive-kicker">Insight</p>
-                  <p class="dive-insight">A pessoa abandona logo depois da boas-vindas, sem responder ao primeiro menu.</p>
-                  <p class="dive-kicker">Fricções</p>
-                  <ol class="dive-frictions">
-                    <li><strong>Boas-vindas.</strong> Abandono imediato, sem resposta ao primeiro menu.</li>
-                  </ol>
-                  <p class="dive-kicker">Exemplo</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0135e6db">
-                        <code>0135e6db-65e4-46ae-8010-19cf751fac67</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Escreveu comprar no WhatsApp, recebeu a boas-vindas e a oferta de 15%, e não respondeu ao menu.</p>
-                      <ol class="talk-thread" id="talk-0135e6db" hidden>
-                        <li><b>Pessoa.</b> Comprar no WhatsApp.</li>
-                        <li><b>Agente.</b> Boas-vindas e, em seguida, a oferta de 15%.</li>
-                        <li><b>Depois.</b> Pesquisa, sem resposta ao menu. A consultora não foi oferecida.</li>
-                      </ol>
-                    </div></li>
-                  </ol>
-                </div>
-              </article>
-              <article class="dive-item">
-                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="dive-loja">
-                  <span class="retencao-copy">
-                    <strong>4. Escolha da loja</strong>
-                    <span>CEP, loja indisponível ou sem seleção</span>
-                  </span>
-                  <span class="retencao-stats">
-                    <b>414</b>
-                    <span>3,1%</span>
-                  </span>
-                  <span class="dive-action">Abrir</span>
-                  <span class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 3.1%"></span></span>
-                </button>
-                <div class="dive-body" id="dive-loja" hidden>
-                  <p class="dive-kicker">Insight</p>
-                  <p class="dive-insight">Das 414 sessões, 221 param na solicitação de CEP, 57 encontram loja indisponível e 136 não selecionam a loja.</p>
-                  <p class="dive-kicker">Fricções</p>
-                  <ol class="dive-frictions">
-                    <li><strong>CEP.</strong> 221 sessões param quando o fluxo pede o CEP.</li>
-                    <li><strong>Loja indisponível.</strong> 57 sessões.</li>
-                    <li><strong>Sem seleção.</strong> 136 sessões em que a pessoa não escolhe a loja.</li>
-                  </ol>
-                  <p class="dive-kicker">CEP</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-01855197">
-                        <code>01855197-a1e3-40b2-b165-be806a5ba193</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Escolheu o combo Lily L’Or Elixir, pediu para finalizar e parou quando o fluxo pediu o CEP para chegar na consultora.</p>
-                      <ol class="talk-thread" id="talk-01855197" hidden>
-                        <li><b>Pessoa.</b> Quero conhecer a nova fragrância de Lily L’Or Elixir. Adicionou o combo à sacola e pediu para finalizar.</li>
-                        <li><b>Agente.</b> Recapitulou o combo, de R$ 539,80 por R$ 473,80, e pediu o CEP ou a rua e a cidade para falar com uma consultora.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. O CEP não veio.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00a1b206">
-                        <code>00a1b206-01c5-46ab-aabe-97ffe5a1a0f2</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">A conversa ficou em mensagens sem pedido, até a pessoa pedir a consultora. Parou na solicitação de CEP.</p>
-                      <ol class="talk-thread" id="talk-00a1b206" hidden>
-                        <li><b>Pessoa.</b> Várias mensagens sem pedido, entre elas “io” e textos soltos.</li>
-                        <li><b>Agente.</b> Repetiu o menu de produtos, perfumaria ou loja.</li>
-                        <li><b>Pessoa.</b> Quero continuar. Depois, buscar produto e falar com consultora.</li>
+                      <p class="talk-note">Pediu a consultora logo depois do oi e parou no pedido de CEP.</p>
+                      <ol class="talk-thread" id="talk-e6c9c375" hidden>
+                        <li><b>Pessoa.</b> Oi. Falar com consultora.</li>
                         <li><b>Agente.</b> Pediu o CEP ou a rua e a cidade.</li>
-                        <li><b>Depois.</b> A planilha para na solicitação. O CEP não veio.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. O CEP não veio.</li>
+                      </ol>
+                    </div></li>
+                  </ol>
+                  <p class="dive-kicker">Lista de lojas</p>
+                  <ol class="dive-talks">
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-3bf9f7dc">
+                        <code>3bf9f7dc-7020-4752-af28-40521de988d2</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu a consultora e enviou um número que o agente não reconheceu como CEP. A lista de lojas não chegou.</p>
+                      <ol class="talk-thread" id="talk-3bf9f7dc" hidden>
+                        <li><b>Pessoa.</b> Falar com consultora. Depois, seguir por aqui.</li>
+                        <li><b>Agente.</b> Pediu o CEP. O número enviado não foi lido como endereço.</li>
+                        <li><b>Pessoa.</b> Pediu a consultora de novo e seguir por aqui.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem escolha de loja.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-29bf5128">
+                        <code>29bf5128-a941-42c0-be3b-db79118e5948</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Enviou o CEP, as lojas apareceram e a pessoa não escolheu o número da loja.</p>
+                      <ol class="talk-thread" id="talk-29bf5128" hidden>
+                        <li><b>Pessoa.</b> Queria falar com uma consultora e enviou o CEP.</li>
+                        <li><b>Agente.</b> Mostrou as lojas e pediu o número da escolhida.</li>
+                        <li><b>Pessoa.</b> Pediu a consultora de novo e falou em revenda, sem escolher a loja.</li>
+                        <li><b>Depois.</b> Na pesquisa, marcou que não gostou.</li>
                       </ol>
                     </div></li>
                   </ol>
                   <p class="dive-kicker">Loja indisponível</p>
                   <ol class="dive-talks">
                     <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-00468cf3">
-                        <code>00468cf3-4171-4c67-9ffd-483fe8b4a80b</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0a77c746">
+                        <code>0a77c746-9c72-42aa-a619-7e41d373add3</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Pediu a consultora. A única loja do local estava indisponível, e a pessoa foi para o app ou o site.</p>
-                      <ol class="talk-thread" id="talk-00468cf3" hidden>
-                        <li><b>Pessoa.</b> Queria falar com uma consultora de loja.</li>
-                        <li><b>Agente.</b> Pediu o CEP ou a localização.</li>
-                        <li><b>Pessoa.</b> Compartilhou a localização.</li>
-                        <li><b>Agente.</b> A única loja do local estava indisponível. O WhatsApp da loja atende de segunda a sexta, 8h às 17h, e sábado, 8h às 12h.</li>
-                        <li><b>Pessoa.</b> Ir para app ou site.</li>
+                      <p class="talk-note">Queria a loja. A única do local estava indisponível.</p>
+                      <ol class="talk-thread" id="talk-0a77c746" hidden>
+                        <li><b>Pessoa.</b> Veio do Instagram e queria falar com a loja.</li>
+                        <li><b>Agente.</b> A única loja do local estava indisponível. O WhatsApp atende de segunda a quinta, 8h15 às 17h50, e sábado, 8h15 às 11h50.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem escolha.</li>
                       </ol>
                     </div></li>
                     <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-013c3e00">
-                        <code>013c3e00-4d41-4a92-bcd9-1c225cb5e627</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-9cd97e98">
+                        <code>9cd97e98-5bc8-443a-b36c-f16dd3c8b9c0</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Pediu a consultora duas vezes. Nas duas, a loja do local estava indisponível.</p>
-                      <ol class="talk-thread" id="talk-013c3e00" hidden>
-                        <li><b>Pessoa.</b> Queria falar com uma consultora.</li>
-                        <li><b>Agente.</b> Pediu a localização. A loja encontrada estava indisponível, com atendimento de terça a sábado, 10h às 18h.</li>
-                        <li><b>Pessoa.</b> Pediu para mudar o endereço e compartilhou a localização de novo.</li>
-                        <li><b>Agente.</b> A outra loja também estava indisponível, de segunda a sábado, 10h às 18h.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem escolha.</li>
-                      </ol>
-                    </div></li>
-                  </ol>
-                  <p class="dive-kicker">Sem seleção</p>
-                  <ol class="dive-talks">
-                    <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-03043d42">
-                        <code>03043d42-3c12-487a-b8aa-1097b7338f29</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Queria outra loja, mais perto, e não escolheu as que apareceram. A mídia que mandou não foi lida. Encerrou dizendo que não gostou.</p>
-                      <ol class="talk-thread" id="talk-03043d42" hidden>
-                        <li><b>Pessoa.</b> Pediu a consultora e mandou uma mídia.</li>
-                        <li><b>Agente.</b> Disse que não conseguia ver a mídia e pediu o CEP.</li>
-                        <li><b>Pessoa.</b> Compartilhou a localização e recusou as lojas sugeridas. Queria outra, mais perto.</li>
-                        <li><b>Agente.</b> As lojas ficavam em outra cidade. Pediu de novo o CEP.</li>
-                        <li><b>Pessoa.</b> Deixa pra lá. Disse que o agente não falava e só mandava para outra loja.</li>
-                        <li><b>Depois.</b> Na pesquisa, marcou que não gostou. A consultora foi oferecida de novo no fim.</li>
-                      </ol>
-                    </div></li>
-                    <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-02f7fe55">
-                        <code>02f7fe55-322f-435b-b3a7-3553944eedf2</code>
-                        <span class="talk-open-label">Abrir conversa</span>
-                      </button>
-                      <p class="talk-note">Pediu a consultora, as lojas apareceram, e a pergunta virou o brinde de aniversário. Agradeceu e saiu sem escolher.</p>
-                      <ol class="talk-thread" id="talk-02f7fe55" hidden>
-                        <li><b>Pessoa.</b> Pediu a consultora e compartilhou a localização.</li>
-                        <li><b>Agente.</b> Encontrou lojas e pediu para escolher.</li>
-                        <li><b>Pessoa.</b> Mudou a pergunta: como pegar o brinde de aniversário.</li>
-                        <li><b>Agente.</b> Explicou o resgate do nível ouro na loja ou no aplicativo.</li>
-                        <li><b>Pessoa.</b> Não. Muito obrigado.</li>
+                      <p class="talk-note">Pediu a consultora, o agente encontrou uma loja e pediu o CPF para transferir. Em seguida entra um novo pedido de loja.</p>
+                      <ol class="talk-thread" id="talk-9cd97e98" hidden>
+                        <li><b>Pessoa.</b> Bom dia. Falar com consultora. Enviou o CEP.</li>
+                        <li><b>Agente.</b> Encontrou uma loja e perguntou se transferia.</li>
+                        <li><b>Pessoa.</b> Conversar com a loja.</li>
+                        <li><b>Agente.</b> Disse que estava passando para a loja e pediu o CPF.</li>
+                        <li><b>Depois.</b> A conversa segue com uma nova entrada pedindo a loja.</li>
                       </ol>
                     </div></li>
                   </ol>
                 </div>
               </article>
               <article class="dive-item">
-                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="dive-produto">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d12-carrossel">
                   <span class="retencao-copy">
-                    <strong>5. Produto/fragrância não encontrada</strong>
-                    <span>O item exato não apareceu</span>
+                    <strong>3. Pós-exibição de carrossel</strong>
+                    <span>Viu o produto e não escolheu</span>
                   </span>
                   <span class="retencao-stats">
-                    <b>94</b>
-                    <span>0,7%</span>
+                    <b>5.231</b>
+                    <span class="retencao-share">12,40%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
-                  <span class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.7%"></span></span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 12.4%"></span></span>
                 </button>
-                <div class="dive-body" id="dive-produto" hidden>
+                <div class="dive-body" id="d12-carrossel" hidden>
+                  <p class="dive-share">12,40% das 42.178 sessões.</p>
                   <p class="dive-kicker">Insight</p>
-                  <p class="dive-insight">O bot mostra alternativas ou não entende o texto livre, e a pessoa não acha o item que buscou.</p>
+                  <p class="dive-insight">A pessoa chega na recomendação e não clica em comprar ou escolher.</p>
                   <p class="dive-kicker">Fricções</p>
                   <ol class="dive-frictions">
-                    <li><strong>Carrossel sem o item.</strong> O bot exibe alternativas e o item específico não está ali.</li>
-                    <li><strong>Texto livre.</strong> A pessoa busca um produto que o agente não encontra.</li>
+                    <li><strong>Preço.</strong> 83% desta categoria. O valor fica acima do que a pessoa quer gastar.</li>
+                    <li><strong>Relevância do item.</strong> 15%. O carrossel não é a fragrância que ela queria.</li>
+                    <li><strong>Visualização.</strong> 2%. É difícil ver detalhe, volume e depoimento dentro do WhatsApp.</li>
                   </ol>
-                  <p class="dive-kicker">Carrossel sem o item</p>
+                  <p class="dive-insight">Num recorte sem identificação, o carrossel mostrou fragrâncias de R$ 99,90 a R$ 189,90 e perguntou qual combinava. A pessoa viu e não interagiu mais.</p>
+                  <p class="dive-kicker">Exemplos</p>
                   <ol class="dive-talks">
                     <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0b993714">
-                        <code>0b993714-af16-4b23-9070-8c3d1d4df0fa</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-e8f653fa">
+                        <code>e8f653fa-d751-4d9d-a2a4-c2435b147c05</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Pediu o hidratante de cereja a R$ 22,90. O agente achou opções a partir de R$ 56,90. A pessoa não respondeu e não foi para a consultora.</p>
-                      <ol class="talk-thread" id="talk-0b993714" hidden>
-                        <li><b>Agente.</b> Uma conversa anterior com a loja tinha sido encerrada, com link de catálogo.</li>
-                        <li><b>Pessoa.</b> Você tem esse hidratante de cereja de R$ 22,90?</li>
-                        <li><b>Agente.</b> Encontrou hidratantes de cereja a partir de R$ 56,90, e não a opção de R$ 22,90. Ofereceu procurar mais perto desse valor.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      <p class="talk-note">Pediu o valor, foi para perfume, abriu o Egeo Bomb Black 90ml e parou antes de escolher.</p>
+                      <ol class="talk-thread" id="talk-e8f653fa" hidden>
+                        <li><b>Pessoa.</b> Tarde. Valor. Depois, perfume e Egeo Bomb Black.</li>
+                        <li><b>Agente.</b> Mostrou o Egeo Bomb Black Desodorante Colônia 90ml e pediu para escolher o produto.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem clique de compra.</li>
                       </ol>
                     </div></li>
                     <li><span>2</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0b9a2f98">
-                        <code>0b9a2f98-3b46-4057-92d6-fca1b2366694</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-2a3673b7">
+                        <code>2a3673b7-d203-4b67-8a0e-b431a25c4bf9</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Pediu body splash The Blend masculino. O agente não achou o body splash, ofereceu Eau de Parfum e a consultora, e a pessoa não seguiu.</p>
-                      <ol class="talk-thread" id="talk-0b9a2f98" hidden>
-                        <li><b>Pessoa.</b> Você tem o body splash The Blend? Depois, body splash masculino.</li>
-                        <li><b>Agente.</b> Não encontrou body splash The Blend. Achou Eau de Parfum da linha e ofereceu a consultora duas vezes.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta.</li>
+                      <p class="talk-note">Viu a seleção Toy Story, respondeu só oi e não escolheu um item.</p>
+                      <ol class="talk-thread" id="talk-2a3673b7" hidden>
+                        <li><b>Pessoa.</b> Oie.</li>
+                        <li><b>Agente.</b> Mostrou a coleção Toy Story e perguntou qual item conhecer.</li>
+                        <li><b>Pessoa.</b> Oi.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem escolha.</li>
                       </ol>
                     </div></li>
                   </ol>
-                  <p class="dive-kicker">Texto livre</p>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d12-busca">
+                  <span class="retencao-copy">
+                    <strong>4. Durante a busca ou seleção</strong>
+                    <span>Parou nos menus antes do produto</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>384</b>
+                    <span class="retencao-share">0,91%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 0.91%"></span></span>
+                </button>
+                <div class="dive-body" id="d12-busca" hidden>
+                  <p class="dive-share">0,91% das 42.178 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa rompe enquanto navega em submenu ou árvore de categoria.</p>
+                  <p class="dive-kicker">Fricções</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Menus demais.</strong> 86% desta categoria. Muitas perguntas antes de mostrar o produto.</li>
+                    <li><strong>Texto livre.</strong> 12,4%. Dificuldade para escolher uma opção fechada de categoria.</li>
+                    <li><strong>Categorias parecidas.</strong> 1,6%. A decisão entre opções próximas, como corpo e banho, demora e o engajamento cai.</li>
+                  </ol>
+                  <p class="dive-kicker">Exemplos</p>
                   <ol class="dive-talks">
                     <li><span>1</span><div>
-                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-04f7f965">
-                        <code>04f7f965-68fe-4d64-894d-2f1d2640e36c</code>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-19a57e49">
+                        <code>19a57e49-a559-424f-875a-c50e81bb3a3c</code>
                         <span class="talk-open-label">Abrir conversa</span>
                       </button>
-                      <p class="talk-note">Mandou o código 817505. O agente não encontrou o produto e pediu a categoria. A pessoa não respondeu.</p>
-                      <ol class="talk-thread" id="talk-04f7f965" hidden>
-                        <li><b>Pessoa.</b> 817505.</li>
-                        <li><b>Agente.</b> Não encontrou produto com esse código e pediu a categoria.</li>
-                        <li><b>Depois.</b> Oferta de 15% e pesquisa. Sem resposta. A consultora não foi oferecida.</li>
+                      <p class="talk-note">Disse que não tinha conta, pediu para encerrar se existisse e saiu sem buscar produto.</p>
+                      <ol class="talk-thread" id="talk-19a57e49" hidden>
+                        <li><b>Pessoa.</b> Oi. Não tenho nenhuma conta. Vocês se enganaram.</li>
+                        <li><b>Agente.</b> Disse que não precisava de cadastro e ofereceu categorias.</li>
+                        <li><b>Pessoa.</b> Pediu para encerrar a conta, se houvesse uma no nome dela. Depois, não. Muito obrigado.</li>
+                        <li><b>Depois.</b> Na pesquisa, disse que no geral foi boa.</li>
+                      </ol>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-b9371f41">
+                        <code>b9371f41-ce9e-47e7-ab11-20192afdc482</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">O nome da conversa não era o dela. Desconfiou do atendimento e não seguiu nas categorias.</p>
+                      <ol class="talk-thread" id="talk-b9371f41" hidden>
+                        <li><b>Pessoa.</b> Disse que não era a pessoa do nome usado na conversa e pediu o nome do cadastro.</li>
+                        <li><b>Agente.</b> Disse que não via o cadastro e perguntou como chamar.</li>
+                        <li><b>Pessoa.</b> Desconfiou do atendimento.</li>
+                        <li><b>Depois.</b> Na pesquisa, marcou que não gostou e recusou a consultora.</li>
+                      </ol>
+                    </div></li>
+                  </ol>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d12-produto">
+                  <span class="retencao-copy">
+                    <strong>5. Produto/fragrância não encontrada</strong>
+                    <span>O item buscado não apareceu</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>40</b>
+                    <span class="retencao-share">0,09%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.09%"></span></span>
+                </button>
+                <div class="dive-body" id="d12-produto" hidden>
+                  <p class="dive-share">0,09% das 42.178 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa busca um termo específico e o agente não encontra o produto.</p>
+                  <p class="dive-kicker">Fricção</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Sem substituto.</strong> Diz que não tem o produto e não sugere um item parecido.</li>
+                  </ol>
+                  <p class="dive-kicker">Exemplo</p>
+                  <ol class="dive-talks">
+                    <li><span>1</span><div>
+                      <button type="button" class="talk-open" aria-expanded="false" aria-controls="talk-0521eb7e">
+                        <code>0521eb7e-3557-46d5-9593-a45772f31ea6</code>
+                        <span class="talk-open-label">Abrir conversa</span>
+                      </button>
+                      <p class="talk-note">Pediu o valor do Aura. O agente não encontrou no catálogo e não ofereceu um substituto.</p>
+                      <ol class="talk-thread" id="talk-0521eb7e" hidden>
+                        <li><b>Pessoa.</b> Qual o valor do Aura? Disse que estava numa propaganda do YouTube.</li>
+                        <li><b>Agente.</b> Não encontrou Aura e pediu foto ou descrição do frasco.</li>
+                        <li><b>Pessoa.</b> Ia ver se conseguia achar a propaganda.</li>
+                        <li><b>Depois.</b> Oferta de compra e pesquisa. Sem produto substituto.</li>
                       </ol>
                     </div></li>
                   </ol>
@@ -1796,15 +1660,190 @@
               </article>
             </div>
             <p class="def">
-              A barra é a participação dentro das 13.176 sessões de 10 nov. Na loja, 221 param no CEP, 57 encontram loja indisponível e 136 não selecionam.
-              O id abre o recorte da <a href="https://docs.google.com/spreadsheets/d/1U9zb5G9YVtbb1AmP0DYoi18oYdC9tk9YrE0oW-w9GRA/edit?gid=0#gid=0" target="_blank" rel="noopener">planilha de amostras</a>, sem telefone, CEP ou endereço. Uma sessão de kit não está na planilha.
+              A barra é a participação dentro das 42.178 sessões de 12 nov.
+              Na loja, 61,4% param no pedido de CEP, 12,3% não escolhem a loja da lista e 26,3% encontram loja indisponível ou sem cobertura.
+              O id abre o recorte da <a href="https://docs.google.com/spreadsheets/d/1U9zb5G9YVtbb1AmP0DYoi18oYdC9tk9YrE0oW-w9GRA/edit?gid=0#gid=0" target="_blank" rel="noopener">planilha de amostras</a>, sem telefone, CEP ou endereço.
+            </p>
+          </div>
+          <div class="panel retencao-day">
+            <div class="retencao-head">
+              <h3 class="section-title">13 nov · sexta</h3>
+              <span class="retencao-col-label">12.481 sessões · participação</span>
+            </div>
+            <div class="dive-list">
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d13-cep">
+                  <span class="retencao-copy">
+                    <strong>1. Envio do CEP</strong>
+                    <span>Saiu quando o fluxo pediu o CEP</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>4.373</b>
+                    <span class="retencao-share">35,04%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 35.04%"></span></span>
+                </button>
+                <div class="dive-body" id="d13-cep" hidden>
+                  <p class="dive-share">35,04% das 12.481 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa abandona depois que o fluxo pede o CEP ou a localização.</p>
+                  <p class="dive-kicker">Fricção</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Captura do CEP.</strong> O agente pede o CEP ou o pino do mapa e a pessoa sai sem enviar.</li>
+                  </ol>
+                  <p class="dive-kicker">Exemplos</p>
+                  <ol class="dive-talks">
+                    <li><span>1</span><div>
+                      <code>13769974-b7b2-4e5b-9671-0a15455d581e</code>
+                      <p class="talk-note">Exemplo deste dia. A planilha de amostras não traz esta sessão.</p>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <code>1a23a1c0-b58a-4748-94a5-04dfef7dc2d1</code>
+                      <p class="talk-note">Exemplo deste dia. A planilha de amostras não traz esta sessão.</p>
+                    </div></li>
+                  </ol>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d13-interacao">
+                  <span class="retencao-copy">
+                    <strong>2. 1ª ou 2ª interação</strong>
+                    <span>Saiu na abertura da conversa</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>3.698</b>
+                    <span class="retencao-share">29,63%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 29.63%"></span></span>
+                </button>
+                <div class="dive-body" id="d13-interacao" hidden>
+                  <p class="dive-share">29,63% das 12.481 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A ruptura é cedo, na abertura da conversa.</p>
+                  <p class="dive-kicker">Fricções</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Desistência passiva.</strong> Manda oi ou boa tarde e não clica nos botões de boas-vindas.</li>
+                    <li><strong>Parar.</strong> A primeira mensagem já pede para parar ou sair.</li>
+                    <li><strong>Outra demanda.</strong> Buscava pós-venda ou rastreio e recebeu o fluxo de venda.</li>
+                  </ol>
+                  <p class="dive-kicker">Exemplos</p>
+                  <p class="dive-insight">Os dois ids enviados neste tema são os mesmos do envio do CEP. A planilha não traz essas sessões.</p>
+                  <ol class="dive-talks">
+                    <li><span>1</span><div>
+                      <code>13769974-b7b2-4e5b-9671-0a15455d581e</code>
+                      <p class="talk-note">O mesmo id do envio do CEP.</p>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <code>1a23a1c0-b58a-4748-94a5-04dfef7dc2d1</code>
+                      <p class="talk-note">O mesmo id do envio do CEP.</p>
+                    </div></li>
+                  </ol>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d13-carrossel">
+                  <span class="retencao-copy">
+                    <strong>3. Pós-exibição de carrossel</strong>
+                    <span>Viu a vitrine e não adicionou à sacola</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>2.549</b>
+                    <span class="retencao-share">20,42%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 20.42%"></span></span>
+                </button>
+                <div class="dive-body" id="d13-carrossel" hidden>
+                  <p class="dive-share">20,42% das 12.481 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa recebe a vitrine com foto, título e preço e não adiciona à sacola.</p>
+                  <p class="dive-kicker">Fricções</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Preço.</strong> O valor fica acima do que a pessoa quer gastar na hora.</li>
+                    <li><strong>Relevância.</strong> O carrossel não é a fragrância ou a linha que ela queria.</li>
+                    <li><strong>Variação.</strong> É difícil trocar tamanho ou volume dentro do carrossel.</li>
+                  </ol>
+                  <p class="dive-kicker">Exemplos</p>
+                  <ol class="dive-talks">
+                    <li><span>1</span><div>
+                      <code>1797a567-88cc-4d44-b5b1-bf74a9d60e1a</code>
+                      <p class="talk-note">Exemplo deste dia. A planilha de amostras não traz esta sessão.</p>
+                    </div></li>
+                    <li><span>2</span><div>
+                      <code>3fbb9de0-d68f-44ad-8cc6-7b9f3024728b</code>
+                      <p class="talk-note">Exemplo deste dia. A planilha de amostras não traz esta sessão.</p>
+                    </div></li>
+                  </ol>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d13-busca">
+                  <span class="retencao-copy">
+                    <strong>4. Durante a busca ou seleção</strong>
+                    <span>Navegou e parou antes do produto</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>1.807</b>
+                    <span class="retencao-share">14,48%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 14.48%"></span></span>
+                </button>
+                <div class="dive-body" id="d13-busca" hidden>
+                  <p class="dive-share">14,48% das 12.481 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa passa das boas-vindas, navega e interrompe antes de ver o produto.</p>
+                  <p class="dive-kicker">Fricções</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Etapas demais.</strong> Menus longos antes de uma sugestão concreta.</li>
+                    <li><strong>Tempo entre cliques.</strong> A espera leva ao fim da conversa.</li>
+                  </ol>
+                  <p class="dive-insight">Este corte não trouxe id de exemplo.</p>
+                </div>
+              </article>
+              <article class="dive-item">
+                <button type="button" class="dive-toggle" aria-expanded="false" aria-controls="d13-produto">
+                  <span class="retencao-copy">
+                    <strong>5. Produto/fragrância não encontrada</strong>
+                    <span>O termo buscado não estava no catálogo</span>
+                  </span>
+                  <span class="retencao-stats">
+                    <b>54</b>
+                    <span class="retencao-share">0,43%</span>
+                  </span>
+                  <span class="dive-action">Abrir</span>
+                  <span class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.43%"></span></span>
+                </button>
+                <div class="dive-body" id="d13-produto" hidden>
+                  <p class="dive-share">0,43% das 12.481 sessões.</p>
+                  <p class="dive-kicker">Insight</p>
+                  <p class="dive-insight">A pessoa busca um termo, uma linha ou um nome e o agente não encontra o item.</p>
+                  <p class="dive-kicker">Fricção</p>
+                  <ol class="dive-frictions">
+                    <li><strong>Sem alternativa.</strong> Avisa que não achou e não oferece um item parecido entre os mais vendidos.</li>
+                  </ol>
+                  <p class="dive-kicker">Exemplo</p>
+                  <ol class="dive-talks">
+                    <li><span>1</span><div>
+                      <code>7da33d5f-2576-4325-bf20-ffbaa86d32d1</code>
+                      <p class="talk-note">Exemplo deste dia. A planilha de amostras não traz esta sessão.</p>
+                    </div></li>
+                  </ol>
+                </div>
+              </article>
+            </div>
+            <p class="def">
+              A barra é a participação dentro das 12.481 sessões de 13 nov.
+              Os ids deste dia não estão na <a href="https://docs.google.com/spreadsheets/d/1U9zb5G9YVtbb1AmP0DYoi18oYdC9tk9YrE0oW-w9GRA/edit?gid=0#gid=0" target="_blank" rel="noopener">planilha de amostras</a>. Os dois exemplos da 1ª ou 2ª interação são os mesmos do envio do CEP.
             </p>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · diagnóstico de retenção 10 nov · amostras de conversas</span>
+        <span>Fontes: Dashboard Oficial LD · metas diarizadas · Sinfonia · diagnóstico de retenção 12 e 13 nov · amostras de conversas</span>
         <span><code>X</code> = métrica ausente nesses recortes</span>
       </footer>
     </div>
