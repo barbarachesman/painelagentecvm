@@ -403,9 +403,9 @@
             <span class="scope scope-agente">Motivos de retenção</span>
             <h2>Por que o lead não foi para a consultora</h2>
             <p>
-              Diagnóstico de 10 nov. São 13.176 sessões nos cinco temas.
-              O carrossel concentra 8.115. Clique na linha para abrir a fricção.
-              O id abre o recorte da conversa, a partir da planilha de amostras.
+              Diagnóstico de 10 nov. São 13.176 sessões.
+              Carrossel 61,6%, busca 31,1%, 1ª ou 2ª interação 3,5%, escolha da loja 3,1% e produto não encontrado 0,7%.
+              Clique na linha para abrir a fricção. O id abre o recorte da conversa, a partir da planilha de amostras.
             </p>
           </header>
           <div class="panel">
@@ -422,12 +422,13 @@
                   </span>
                   <span class="retencao-stats">
                     <b>8.115</b>
-                    <span>61,6%</span>
+                    <span class="retencao-share">61,6%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
                   <span class="retencao-bar" aria-hidden="true"><span class="tom-1" style="width: 61.6%"></span></span>
                 </button>
                 <div class="dive-body" id="dive-carrossel" hidden>
+                  <p class="dive-share">61,6% das 13.176 sessões.</p>
                   <p class="dive-kicker">Insight</p>
                   <p class="dive-insight">A pessoa vê o card com preço e não adiciona à sacola. O atrito muda conforme o tipo de card.</p>
                   <p class="dive-kicker">Fricções</p>
@@ -587,12 +588,13 @@
                   </span>
                   <span class="retencao-stats">
                     <b>4.095</b>
-                    <span>31,1%</span>
+                    <span class="retencao-share">31,1%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
                   <span class="retencao-bar" aria-hidden="true"><span class="tom-2" style="width: 31.1%"></span></span>
                 </button>
                 <div class="dive-body" id="dive-busca" hidden>
+                  <p class="dive-share">31,1% das 13.176 sessões.</p>
                   <p class="dive-kicker">Insight</p>
                   <p class="dive-insight">A pessoa escolhe uma categoria ou recebe a oferta de ajuda para achar o produto e sai sem avançar.</p>
                   <p class="dive-kicker">Fricções</p>
@@ -664,12 +666,13 @@
                   </span>
                   <span class="retencao-stats">
                     <b>458</b>
-                    <span>3,5%</span>
+                    <span class="retencao-share">3,5%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
                   <span class="retencao-bar" aria-hidden="true"><span class="tom-4" style="width: 3.5%"></span></span>
                 </button>
                 <div class="dive-body" id="dive-interacao" hidden>
+                  <p class="dive-share">3,5% das 13.176 sessões.</p>
                   <p class="dive-kicker">Insight</p>
                   <p class="dive-insight">A pessoa abandona logo depois da boas-vindas, sem responder ao primeiro menu.</p>
                   <p class="dive-kicker">Fricções</p>
@@ -701,19 +704,20 @@
                   </span>
                   <span class="retencao-stats">
                     <b>414</b>
-                    <span>3,1%</span>
+                    <span class="retencao-share">3,1%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
                   <span class="retencao-bar" aria-hidden="true"><span class="tom-3" style="width: 3.1%"></span></span>
                 </button>
                 <div class="dive-body" id="dive-loja" hidden>
+                  <p class="dive-share">3,1% das 13.176 sessões.</p>
                   <p class="dive-kicker">Insight</p>
-                  <p class="dive-insight">Das 414 sessões, 221 param na solicitação de CEP, 57 encontram loja indisponível e 136 não selecionam a loja.</p>
+                  <p class="dive-insight">Das 414 sessões, 221 param na solicitação de CEP (53,4%), 57 encontram loja indisponível (13,8%) e 136 não selecionam a loja (32,9%).</p>
                   <p class="dive-kicker">Fricções</p>
                   <ol class="dive-frictions">
-                    <li><strong>CEP.</strong> 221 sessões param quando o fluxo pede o CEP.</li>
-                    <li><strong>Loja indisponível.</strong> 57 sessões.</li>
-                    <li><strong>Sem seleção.</strong> 136 sessões em que a pessoa não escolhe a loja.</li>
+                    <li><strong>CEP.</strong> 221 sessões, 53,4% desta categoria. Param quando o fluxo pede o CEP.</li>
+                    <li><strong>Loja indisponível.</strong> 57 sessões, 13,8% desta categoria.</li>
+                    <li><strong>Sem seleção.</strong> 136 sessões, 32,9% desta categoria. A pessoa não escolhe a loja.</li>
                   </ol>
                   <p class="dive-kicker">CEP</p>
                   <ol class="dive-talks">
@@ -817,12 +821,13 @@
                   </span>
                   <span class="retencao-stats">
                     <b>94</b>
-                    <span>0,7%</span>
+                    <span class="retencao-share">0,7%</span>
                   </span>
                   <span class="dive-action">Abrir</span>
                   <span class="retencao-bar" aria-hidden="true"><span class="tom-5" style="width: 0.7%"></span></span>
                 </button>
                 <div class="dive-body" id="dive-produto" hidden>
+                  <p class="dive-share">0,7% das 13.176 sessões.</p>
                   <p class="dive-kicker">Insight</p>
                   <p class="dive-insight">O bot mostra alternativas ou não entende o texto livre, e a pessoa não acha o item que buscou.</p>
                   <p class="dive-kicker">Fricções</p>
@@ -877,7 +882,7 @@
               </article>
             </div>
             <p class="def">
-              A barra é a participação dentro das 13.176 sessões de 10 nov. Na loja, 221 param no CEP, 57 encontram loja indisponível e 136 não selecionam.
+              A barra é a participação dentro das 13.176 sessões de 10 nov: carrossel 61,6%, busca 31,1%, 1ª ou 2ª interação 3,5%, loja 3,1% e produto não encontrado 0,7%. Na loja, o CEP é 53,4%, loja indisponível 13,8% e sem seleção 32,9%.
               O id abre o recorte da <a href="https://docs.google.com/spreadsheets/d/1U9zb5G9YVtbb1AmP0DYoi18oYdC9tk9YrE0oW-w9GRA/edit?gid=0#gid=0" target="_blank" rel="noopener">planilha de amostras</a>, sem telefone, CEP ou endereço. Uma sessão de kit não está na planilha.
             </p>
           </div>
