@@ -34,4 +34,4 @@ O dash LD vale só com o filtro **canal RECEPTIVE**. O funil olha **D-2**, no fu
 - **Origens:** meta BOT de 9 nov por origem no canal RECEPTIVE, com encaminhado, atendimento e conversão em %. O realizado dessa quebra segue de fora. Ativações do canal ACTIVE ficam de fora: o painel olha só o receptivo, quando o lead entra em contato
 - **Agente:** volume, tempo e moderação do agente CVM na Sinfonia
 - **Qualidade:** avaliação da resposta e base de conhecimento ficam em traço, aguardando o time Sinfonia
-- **Retenção:** diagnóstico de 10 nov, com 13.176 sessões. Carrossel 8.115, busca 4.095, 1ª ou 2ª interação 458, escolha da loja 414 e produto não encontrado 94. Cada linha abre as fricções. O id abre o recorte da conversa que está na planilha de amostras, sem telefone, CEP ou endereço
+- **Retenção:** 12 nov, 42.178 sessões, e 13 nov, 12.481 sessões. No dia 12, a 1ª ou 2ª interação é 72,62%. No dia 13, o envio do CEP é 35,04%. Cada linha abre as fricções e a participação. O id de 12 nov abre o recorte da planilha de amostras, sem telefone, CEP ou endereço. Os ids de 13 nov não estão nessa amostra
